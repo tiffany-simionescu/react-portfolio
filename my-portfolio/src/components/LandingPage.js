@@ -14,6 +14,7 @@ class LandingPage extends Component {
               className="avatar-image"
               src={Avatar}
               alt="avatar"
+              style={{ borderRadius: '50%'}}
             />
 
             <div className="banner-text">
