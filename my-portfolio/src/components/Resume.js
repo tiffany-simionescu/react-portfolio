@@ -12,7 +12,9 @@ class Resume extends Component {
     return (
       <div>
         <Grid>
-          <Cell col={4}>
+
+          {/* Left Side */}
+          <Cell className="resume-left-col" col={4}>
             <div style={{ textAlign: 'center' }}>
               <img 
                 src={Avatar}
@@ -27,9 +29,9 @@ class Resume extends Component {
             <h4 style={{ color: 'grey'}}>
               Programmer
             </h4>
-            <hr style={{ borderTop: '3px solid #833fb2', width: '50%' }} />
+            <hr />
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim quam eu lacus laoreet elementum. Aenean nec nisi fermentum, vestibulum sem nec, pharetra leo. Praesent non leo sagittis mi tristique auctor. Etiam ac vulputate neque. Etiam lacinia bibendum eros eu vehicula. Phasellus dui enim, rutrum id libero et, molestie luctus.</p>
-            <hr style={{ borderTop: '3px solid #833fb2', width: '50%' }} />
+            <hr />
             <h5>Address</h5>
             <p>Easley, SC 29642</p>
             <h5>Phone</h5>
@@ -38,8 +40,10 @@ class Resume extends Component {
             <p>tsimionescu@gmail.com</p>
             <h5>Web</h5>
             <p>tiffanysimionescu.com</p>
-            <hr style={{ borderTop: '3px solid #833fb2', width: '50%' }} />
+            <hr />
           </Cell>
+
+          {/* Right Side */}
           <Cell className="resume-right-col" col={8}>
             <h2>Education</h2>
               <Education
@@ -55,7 +59,7 @@ class Resume extends Component {
                 schoolDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus euismod venenatis. Fusce scelerisque eros sit amet tellus dignissim viverra. Pellentesque euismod molestie velit ac."
               />
 
-            <hr style={{ borderTop: '3px solid #e22947' }} />
+            <hr />
 
             <h2>Experience</h2>
               <Experience
@@ -71,7 +75,7 @@ class Resume extends Component {
                 jobDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus euismod venenatis. Fusce scelerisque eros sit amet tellus dignissim viverra. Pellentesque euismod molestie velit ac."
               />
 
-            <hr style={{ borderTop: '3px solid #e22947' }} />
+            <hr />
 
             <h2>Skills</h2>
             <Skills 

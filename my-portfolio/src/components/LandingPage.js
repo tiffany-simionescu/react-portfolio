@@ -22,28 +22,28 @@ class LandingPage extends Component {
 
               <hr />
 
-              <p>HTML/CSS | Bootstrap | JavaScript | React | React Native | NodeJS | Express | MongoDB</p>
+              <p>HTML/CSS | JavaScript | KnexJS | React | Redux | NodeJS | Express | SQLite | PostgreSQL</p>
 
               <div className="social-links">
 
                 {/* LinkedIn */}
-                <a href="http://google.com" rel="noopener noreferrer" target="_blank">
+                <a href="https://www.linkedin.com/in/tiffanysimionescu/" rel="noopener noreferrer" target="_blank">
                   <i className="fa fa-linkedin-square" aria-hidden="true" />
                 </a>
 
                 {/* Github */}
-                <a href="http://google.com" rel="noopener noreferrer" target="_blank">
+                <a href="https://github.com/tiffany-simionescu" rel="noopener noreferrer" target="_blank">
                   <i className="fa fa-github-square" aria-hidden="true" />
                 </a>
 
-                {/* Freecodecamp */}
-                <a href="http://google.com" rel="noopener noreferrer" target="_blank">
-                  <i className="fa fa-free-code-camp" aria-hidden="true" />
+                {/* Facebook */}
+                <a href="https://www.facebook.com/Tiffany-Simionescu-Full-Stack-Web-Developer-337217927229001" rel="noopener noreferrer" target="_blank">
+                  <i className="fa fa-facebook-square" aria-hidden="true" />
                 </a>
 
-                {/* YouTube */}
-                <a href="http://google.com" rel="noopener noreferrer" target="_blank">
-                  <i className="fa fa-youtube-square" aria-hidden="true" />
+                {/* Twitter */}
+                <a href="https://twitter.com/tsimionescu87" rel="noopener noreferrer" target="_blank">
+                  <i className="fa fa-twitter-square" aria-hidden="true" />
                 </a>
 
               </div>

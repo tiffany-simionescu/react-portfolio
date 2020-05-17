@@ -9,6 +9,8 @@
   text-decoration: none;
 }
 
+/* Landing Page */
+
 .landing-grid {
   background: #FEAC5E;
   background: -webkit-linear-gradient(to left, #4BC0C8, #C779D0, #FEAC5E); 
@@ -125,4 +127,14 @@
   background: #27211F;
   color: white;
   padding: 2em;
+  border-radius: 30px;
+}
+
+.resume-left-col hr {
+  border-top: 3px solid #833fb2; 
+  width: 50%; 
+}
+
+.resume-right-col hr {
+  border-top: 3px solid #FEAC5E;
 }
