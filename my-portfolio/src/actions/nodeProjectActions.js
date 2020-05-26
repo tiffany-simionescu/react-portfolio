@@ -22,11 +22,11 @@ export const FETCH_NODE_PROJECTS_FAILURE = "FETCH_NODE_PROJECTS_FAILURE";
 
 
 // == Node Projects Functions == //
-export const fetchNodeProjects = user_id => dispatch => {
+export const fetchNodeProjects = () => dispatch => {
   dispatch({ type: FETCH_INITIALIZE });
 
   axiosWithAuth()
-    .get(`/nodeprojects/users/${user_id}`)
+    .get('/api/nodeprojects')
     .then(res => {
       dispatch({
         type: FETCH_NODE_PROJECTS_SUCCESS,
@@ -44,11 +44,11 @@ export const fetchNodeProjects = user_id => dispatch => {
 
 
 // == Node Project Functions == //
-export const fetchNodeProject = (node_project_id, user_id) => dispatch => {
+export const fetchNodeProject = node_project_id => dispatch => {
   dispatch({ type: FETCH_INITIALIZE });
 
   axiosWithAuth()
-    .get(`/nodeprojects/${node_project_id}/users/${user_id}`)
+    .get(`/api/nodeprojects/${node_project_id}`)
     .then(res => {
       dispatch({
         type: FETCH_NODE_PROJECT_SUCCESS,
@@ -64,11 +64,11 @@ export const fetchNodeProject = (node_project_id, user_id) => dispatch => {
     });
 };
 
-export const addNodeProject = (user_id, node_project) => dispatch => {
+export const addNodeProject = node_project => dispatch => {
   dispatch({ type: POST_INITIALIZE })
 
   axiosWithAuth()
-    .post(`/nodeprojects/users/${user_id}`, node_project)
+    .post('/api/nodeprojects', node_project)
     .then(res => {
       dispatch({
         type: ADD_NODE_PROJECT_SUCCESS,
@@ -83,14 +83,14 @@ export const addNodeProject = (user_id, node_project) => dispatch => {
     });
 };
 
-export const editNodeProject = (node_project_id, user_id, node_project) => dispatch => {
+export const editNodeProject = (node_project_id, node_project) => dispatch => {
   axiosWithAuth()
-    .put(`/nodeprojects/${node_project_id}/users/${user_id}/`, node_project)
+    .put(`/api/nodeprojects/${node_project_id}`, node_project)
     .then(res => {
       dispatch({
         type: EDIT_NODE_PROJECT_SUCCESS
       });
-      fetchNodeProject(node_project_id, user_id)
+      fetchNodeProject(node_project_id)
       console.log("editNodeProject Success", res);
     })
     .catch(err => {
@@ -102,17 +102,17 @@ export const editNodeProject = (node_project_id, user_id, node_project) => dispa
     });
 };
 
-export const deleteNodeProject = (node_project_id, user_id) => dispatch => {
+export const deleteNodeProject = (node_project_id, user_id, props) => dispatch => {
   dispatch({ type: DELETE_INITIALIZE });
 
   axiosWithAuth()
-    .delete(`/nodeprojects/${node_project_id}/users/${user_id}`)
+    .delete(`/api/nodeprojects/${node_project_id}`)
     .then(res => {
       dispatch({
         type: DELETE_NODE_PROJECT_SUCCESS
       });
       fetchNodeProjects(user_id);
-      props.history.push(`/nodeprojects/users/${user_id}`);
+      props.history.push('/api/nodeprojects');
     })
     .catch(err => {
       dispatch({

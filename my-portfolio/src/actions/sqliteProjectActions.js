@@ -22,11 +22,11 @@ export const FETCH_SQLITE_PROJECTS_FAILURE = "FETCH_SQLITE_PROJECTS_FAILURE";
 
 
 // == Sqlite Projects Functions == //
-export const fetchSqliteProjects = user_id => dispatch => {
+export const fetchSqliteProjects = () => dispatch => {
   dispatch({ type: FETCH_INITIALIZE });
 
   axiosWithAuth()
-    .get(`/sqliteprojects/users/${user_id}`)
+    .get(`/api/sqliteprojects`)
     .then(res => {
       dispatch({
         type: FETCH_SQLITE_PROJECTS_SUCCESS,
@@ -44,11 +44,11 @@ export const fetchSqliteProjects = user_id => dispatch => {
 
 
 // == Sqlite Project Functions == //
-export const fetchSqliteProject = (sqlite_project_id, user_id) => dispatch => {
+export const fetchSqliteProject = sqlite_project_id => dispatch => {
   dispatch({ type: FETCH_INITIALIZE });
 
   axiosWithAuth()
-    .get(`/sqliteprojects/${sqlite_project_id}/users/${user_id}`)
+    .get(`/api/sqliteprojects/${sqlite_project_id}`)
     .then(res => {
       dispatch({
         type: FETCH_SQLITE_PROJECT_SUCCESS,
@@ -64,11 +64,11 @@ export const fetchSqliteProject = (sqlite_project_id, user_id) => dispatch => {
     });
 };
 
-export const addSqliteProject = (user_id, sqlite_project) => dispatch => {
+export const addSqliteProject = sqlite_project => dispatch => {
   dispatch({ type: POST_INITIALIZE })
 
   axiosWithAuth()
-    .post(`/sqliteprojects/users/${user_id}`, sqlite_project)
+    .post(`/api/sqliteprojects`, sqlite_project)
     .then(res => {
       dispatch({
         type: ADD_SQLITE_PROJECT_SUCCESS,
@@ -83,14 +83,14 @@ export const addSqliteProject = (user_id, sqlite_project) => dispatch => {
     });
 };
 
-export const editSqliteProject = (sqlite_project_id, user_id, sqlite_project) => dispatch => {
+export const editSqliteProject = (sqlite_project_id, sqlite_project) => dispatch => {
   axiosWithAuth()
-    .put(`/sqliteprojects/${sqlite_project_id}/users/${user_id}/`, sqlite_project)
+    .put(`/api/sqliteprojects/${sqlite_project_id}`, sqlite_project)
     .then(res => {
       dispatch({
         type: EDIT_SQLITE_PROJECT_SUCCESS
       });
-      fetchSqliteProject(sqlite_project_id, user_id)
+      fetchSqliteProject(sqlite_project_id)
       console.log("editSqliteProject Success", res);
     })
     .catch(err => {
@@ -102,17 +102,17 @@ export const editSqliteProject = (sqlite_project_id, user_id, sqlite_project) =>
     });
 };
 
-export const deleteSqliteProject = (sqlite_project_id, user_id) => dispatch => {
+export const deleteSqliteProject = (sqlite_project_id, user_id, props) => dispatch => {
   dispatch({ type: DELETE_INITIALIZE });
 
   axiosWithAuth()
-    .delete(`/sqliteprojects/${sqlite_project_id}/users/${user_id}`)
+    .delete(`/api/sqliteprojects/${sqlite_project_id}`)
     .then(res => {
       dispatch({
         type: DELETE_SQLITE_PROJECT_SUCCESS
       });
       fetchSqliteProjects(user_id);
-      props.history.push(`/sqliteprojects/users/${user_id}`);
+      props.history.push(`/api/sqliteprojects`);
     })
     .catch(err => {
       dispatch({

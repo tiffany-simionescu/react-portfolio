@@ -22,11 +22,11 @@ export const FETCH_REACT_PROJECTS_FAILURE = "FETCH_REACT_PROJECTS_FAILURE";
 
 
 // == React Projects Functions == //
-export const fetchReactProjects = user_id => dispatch => {
+export const fetchReactProjects = () => dispatch => {
   dispatch({ type: FETCH_INITIALIZE });
 
   axiosWithAuth()
-    .get(`/reactprojects/users/${user_id}`)
+    .get('/api/reactprojects')
     .then(res => {
       dispatch({
         type: FETCH_REACT_PROJECTS_SUCCESS,
@@ -44,11 +44,11 @@ export const fetchReactProjects = user_id => dispatch => {
 
 
 // == React Project Functions == //
-export const fetchReactProject = (react_project_id, user_id) => dispatch => {
+export const fetchReactProject = react_project_id => dispatch => {
   dispatch({ type: FETCH_INITIALIZE });
 
   axiosWithAuth()
-    .get(`/reactprojects/${react_project_id}/users/${user_id}`)
+    .get(`/api/reactprojects/${react_project_id}`)
     .then(res => {
       dispatch({
         type: FETCH_REACT_PROJECT_SUCCESS,
@@ -64,11 +64,11 @@ export const fetchReactProject = (react_project_id, user_id) => dispatch => {
     });
 };
 
-export const addReactProject = (user_id, react_project) => dispatch => {
+export const addReactProject = react_project => dispatch => {
   dispatch({ type: POST_INITIALIZE })
 
   axiosWithAuth()
-    .post(`/reactprojects/users/${user_id}`, react_project)
+    .post('/api/reactprojects', react_project)
     .then(res => {
       dispatch({
         type: ADD_REACT_PROJECT_SUCCESS,
@@ -83,14 +83,14 @@ export const addReactProject = (user_id, react_project) => dispatch => {
     });
 };
 
-export const editReactProject = (react_project_id, user_id, react_project) => dispatch => {
+export const editReactProject = (react_project_id, react_project) => dispatch => {
   axiosWithAuth()
-    .put(`/reactprojects/${react_project_id}/users/${user_id}/`, react_project)
+    .put(`/api/reactprojects/${react_project_id}`, react_project)
     .then(res => {
       dispatch({
         type: EDIT_REACT_PROJECT_SUCCESS
       });
-      fetchReactProject(react_project_id, user_id)
+      fetchReactProject(react_project_id)
       console.log("editReactProject Success", res);
     })
     .catch(err => {
@@ -102,17 +102,17 @@ export const editReactProject = (react_project_id, user_id, react_project) => di
     });
 };
 
-export const deleteReactProject = (react_project_id, user_id) => dispatch => {
+export const deleteReactProject = (react_project_id, user_id, props) => dispatch => {
   dispatch({ type: DELETE_INITIALIZE });
 
   axiosWithAuth()
-    .delete(`/reactprojects/${react_project_id}/users/${user_id}`)
+    .delete(`/api/reactprojects/${react_project_id}`)
     .then(res => {
       dispatch({
         type: DELETE_REACT_PROJECT_SUCCESS
       });
       fetchReactProjects(user_id);
-      props.history.push(`/reactprojects/users/${user_id}`);
+      props.history.push('/api/reactprojects');
     })
     .catch(err => {
       dispatch({

@@ -22,11 +22,11 @@ export const FETCH_REDUX_PROJECTS_FAILURE = "FETCH_REDUX_PROJECTS_FAILURE";
 
 
 // == Redux Projects Functions == //
-export const fetchReduxProjects = user_id => dispatch => {
+export const fetchReduxProjects = () => dispatch => {
   dispatch({ type: FETCH_INITIALIZE });
 
   axiosWithAuth()
-    .get(`/reduxprojects/users/${user_id}`)
+    .get('/api/reduxprojects')
     .then(res => {
       dispatch({
         type: FETCH_REDUX_PROJECTS_SUCCESS,
@@ -44,11 +44,11 @@ export const fetchReduxProjects = user_id => dispatch => {
 
 
 // == Redux Project Functions == //
-export const fetchReduxProject = (redux_project_id, user_id) => dispatch => {
+export const fetchReduxProject = redux_project_id => dispatch => {
   dispatch({ type: FETCH_INITIALIZE });
 
   axiosWithAuth()
-    .get(`/reduxprojects/${redux_project_id}/users/${user_id}`)
+    .get(`/api/reduxprojects/${redux_project_id}`)
     .then(res => {
       dispatch({
         type: FETCH_REDUX_PROJECT_SUCCESS,
@@ -64,11 +64,11 @@ export const fetchReduxProject = (redux_project_id, user_id) => dispatch => {
     });
 };
 
-export const addReduxProject = (user_id, redux_project) => dispatch => {
+export const addReduxProject = redux_project => dispatch => {
   dispatch({ type: POST_INITIALIZE })
 
   axiosWithAuth()
-    .post(`/reduxprojects/users/${user_id}`, redux_project)
+    .post('/api/reduxprojects', redux_project)
     .then(res => {
       dispatch({
         type: ADD_REDUX_PROJECT_SUCCESS,
@@ -83,14 +83,14 @@ export const addReduxProject = (user_id, redux_project) => dispatch => {
     });
 };
 
-export const editReduxProject = (redux_project_id, user_id, redux_project, ) => dispatch => {
+export const editReduxProject = (redux_project_id, redux_project) => dispatch => {
   axiosWithAuth()
-    .put(`/reduxprojects/${redux_project_id}/users/${user_id}/`, redux_project)
+    .put(`/api/reduxprojects/${redux_project_id}`, redux_project)
     .then(res => {
       dispatch({
         type: EDIT_REDUX_PROJECT_SUCCESS
       });
-      fetchReactProject(redux_project_id, user_id)
+      fetchReactProject(redux_project_id)
       console.log("editReduxProject Success", res);
     })
     .catch(err => {
@@ -102,17 +102,17 @@ export const editReduxProject = (redux_project_id, user_id, redux_project, ) => 
     });
 };
 
-export const deleteReduxProject = (redux_project_id, user_id) => dispatch => {
+export const deleteReduxProject = (redux_project_id, user_id, props) => dispatch => {
   dispatch({ type: DELETE_INITIALIZE });
 
   axiosWithAuth()
-    .delete(`/reduxprojects/${redux_project_id}/users/${user_id}`)
+    .delete(`/api/reduxprojects/${redux_project_id}`)
     .then(res => {
       dispatch({
         type: DELETE_REDUX_PROJECT_SUCCESS
       });
       fetchReduxProjects(user_id);
-      props.history.push(`/reduxprojects/users/${user_id}`);
+      props.history.push(`/api/reduxprojects`);
     })
     .catch(err => {
       dispatch({
