@@ -13,11 +13,11 @@ import PostgresqlProjectCardContainer from './containers/PostgresqlProjectCardCo
 // import SqliteProjectCard from './project_cards/SqliteProjectCard';
 // import PostgresqlProjectCard from './project_cards/PostgresqlProjectCard';
 
-import { fetchReactProjects} from '../actions/reactProjectActions';
-import { fetchReduxProjects } from '../actions/reduxProjectActions';
-import { fetchNodeProjects } from '../actions/nodeProjectActions';
-import { fetchSqliteProjects } from '../actions/sqliteProjectActions';
-import { fetchPostgresqlProjects } from '../actions/postgresqlProjectActions';
+// import { fetchReactProjects} from '../actions/reactProjectActions';
+// import { fetchReduxProjects } from '../actions/reduxProjectActions';
+// import { fetchNodeProjects } from '../actions/nodeProjectActions';
+// import { fetchSqliteProjects } from '../actions/sqliteProjectActions';
+// import { fetchPostgresqlProjects } from '../actions/postgresqlProjectActions';
 
 // React Mdl 
 import { Tabs, Tab, Grid, Cell } from 'react-mdl';
