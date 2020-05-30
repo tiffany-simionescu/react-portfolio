@@ -13,22 +13,22 @@ function ReduxProjectCard(props) {
   return (
     <div>
       <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
-            <CardTitle style={{ color: '#fff', height: '176px', background: `url(${props.redux_project_image}) center / cover` }}>
-              {props.redux_project_title}
+            <CardTitle style={{ color: '#fff', height: '176px', background: `url(${props.redux_project.redux_project_image}) center / cover` }}>
+              {props.redux_project.redux_project_title}
             </CardTitle>  
             <CardText>
-              {props.redux_project_description}
+              {props.redux_project.redux_project_description}
             </CardText>
             <CardActions border>
               <Button 
                 colored
-                href={props.redux_project_github_link} 
+                href={props.redux_project.redux_project_github_link} 
                 target="_blank">
                   Github
               </Button>
               <Button 
                 colored
-                href={props.redux_project_live_link} 
+                href={props.redux_project.redux_project_live_link} 
                 target="_blank">
                   LiveDemo
               </Button>
