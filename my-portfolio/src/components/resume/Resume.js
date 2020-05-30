@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Avatar from '../images/avatar.jpg';
+import Avatar from '../../images/avatar.jpg';
 import Education from './Education';
 import Experience from './Experience';
 import Skills from './Skills';
