@@ -26,7 +26,7 @@ const RegisterForm = props => {
   return (
     <div>
       <h1>Register</h1>
-      <form on onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <label>First Name</label>
         <input
           type="text"
@@ -78,7 +78,7 @@ const RegisterForm = props => {
         />
         <p>Format: 123-456-7890</p>
 
-        <button>Register</button>
+        <button type="submit">Register</button>
       </form>
     </div>
   );
