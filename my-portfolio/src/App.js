@@ -8,7 +8,7 @@ import Main from './components/Main';
 // React MDL
 import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
 
-function App() {
+function App(props) {
   return (
     <div className="demo-big-content">
       <Layout>
@@ -19,6 +19,12 @@ function App() {
                   <Link to="/aboutme">About Me</Link>
                   <Link to="/projects">Projects</Link>
                   <Link to="/contact">Contact</Link>
+                  <Link to="/register">Register</Link>
+                  {props.loggedIn ? (
+                    <Link to="/" onClick={() => props.logout()}>Logout</Link>
+                  ) : (
+                    <Link to="/login">Login</Link>
+                  )}
               </Navigation>
           </Header>
           <Drawer className="drawer-link" title={<Link style={{ textDecoration: 'none', color: 'black' }}
@@ -28,6 +34,12 @@ function App() {
                   <Link to="/aboutme">About Me</Link>
                   <Link to="/projects">Projects</Link>
                   <Link to="/contact">Contact</Link>
+                  <Link to="/register">Register</Link>
+                  {props.loggedIn ? (
+                    <Link to="/" onClick={() => props.logout()}>Logout</Link>
+                  ) : (
+                    <Link to="/login">Login</Link>
+                  )}
               </Navigation>
           </Drawer>
           <Content>
