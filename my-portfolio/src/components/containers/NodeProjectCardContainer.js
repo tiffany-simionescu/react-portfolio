@@ -12,7 +12,9 @@ const NodeProjectCardContainer = props => {
     <div>
       {props.node_projects &&
         props.node_projects.map((node_project, index) => {
-          <NodeProjectCard key={index} node_project={node_project} />
+          return (
+            <NodeProjectCard key={index} node_project={node_project} />
+          )
         })}
     </div>
   )

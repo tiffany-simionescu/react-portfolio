@@ -5,7 +5,7 @@ import { addReactProject } from '../../actions/reactProjectActions';
 // Update style later
 
 const ReactProjectForm = props => {
-  const [reactProject, setReactProject] = useState({
+  const [react_project, setReactProject] = useState({
     react_project_image: "",
     react_project_title: "",
     react_project_description: "",
@@ -15,13 +15,13 @@ const ReactProjectForm = props => {
 
   const handleChange = e => {
     setReactProject({
-      ...reactProject,
+      ...react_project,
       [e.target.name]: e.target.value
     });
 
   const handleSubmit = e => {
     e.preventDefault();
-    props.addReactProject(reactProject, props.react_project_id);
+    props.addReactProject(react_project, props.react_project_id);
     setReactProject({
       react_project_image: "",
       react_project_title: "",

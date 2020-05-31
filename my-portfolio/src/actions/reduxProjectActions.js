@@ -90,7 +90,7 @@ export const editReduxProject = (redux_project_id, redux_project) => dispatch =>
       dispatch({
         type: EDIT_REDUX_PROJECT_SUCCESS
       });
-      fetchReactProject(redux_project_id)
+      fetchReduxProject(redux_project_id)
       console.log("editReduxProject Success", res);
     })
     .catch(err => {

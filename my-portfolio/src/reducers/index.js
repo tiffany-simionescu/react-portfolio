@@ -4,6 +4,7 @@ import nodeProjectReducer from './nodeProjectReducers';
 import sqliteProjectReducer from './sqliteProjectReducers';
 import postgresqlProjectReducer from './postgresqlProjectReducers';
 import userReducer from './userReducers';
+import { reduceReducers } from 'redux-loop';
 
 const reducer = reduceReducers(
   reactProjectReducer,

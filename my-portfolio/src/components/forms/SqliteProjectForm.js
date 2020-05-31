@@ -5,7 +5,7 @@ import { addSqliteProject } from '../../actions/sqliteProjectActions';
 // Update style later
 
 const SqliteProjectForm = props => {
-  const [sqliteProject, setSqliteProject] = useState({
+  const [sqlite_project, setSqliteProject] = useState({
     sqlite_project_image: "",
     sqlite_project_title: "",
     sqlite_project_description: "",
@@ -15,13 +15,13 @@ const SqliteProjectForm = props => {
 
   const handleChange = e => {
     setSqliteProject({
-      ...sqliteProject,
+      ...sqlite_project,
       [e.target.name]: e.target.value
     });
 
   const handleSubmit = e => {
     e.preventDefault();
-    props.addSqliteProject(sqliteProject, props.sqlite_project_id);
+    props.addSqliteProject(sqlite_project, props.sqlite_project_id);
     setSqliteProject({
       sqlite_project_image: "",
       sqlite_project_title: "",

@@ -5,7 +5,7 @@ import { addReduxProject } from '../../actions/reduxProjectActions';
 // Update style later
 
 const ReduxProjectForm = props => {
-  const [reduxProject, setReduxProject] = useState({
+  const [redux_project, setReduxProject] = useState({
     redux_project_image: "",
     redux_project_title: "",
     redux_project_description: "",
@@ -15,13 +15,13 @@ const ReduxProjectForm = props => {
 
   const handleChange = e => {
     setReduxProject({
-      ...reduxProject,
+      ...redux_project,
       [e.target.name]: e.target.value
     });
 
   const handleSubmit = e => {
     e.preventDefault();
-    props.addReduxProject(reduxProject, props.redux_project_id);
+    props.addReduxProject(redux_project, props.redux_project_id);
     setReduxProject({
       redux_project_image: "",
       redux_project_title: "",

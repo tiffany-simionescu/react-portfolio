@@ -5,7 +5,7 @@ import { addNodeProject } from '../../actions/nodeProjectActions';
 // Update style later
 
 const NodeProjectForm = props => {
-  const [nodeProject, setNodeProject] = useState({
+  const [node_project, setNodeProject] = useState({
     node_project_image: "",
     node_project_title: "",
     node_project_description: "",
@@ -15,13 +15,13 @@ const NodeProjectForm = props => {
 
   const handleChange = e => {
     setNodeProject({
-      ...nodeProject,
+      ...node_project,
       [e.target.name]: e.target.value
     });
 
   const handleSubmit = e => {
     e.preventDefault();
-    props.addNodeProject(nodeProject, props.node_project_id);
+    props.addNodeProject(node_project, props.node_project_id);
     setNodeProject({
       node_project_image: "",
       node_project_title: "",

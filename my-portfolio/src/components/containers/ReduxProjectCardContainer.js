@@ -12,7 +12,9 @@ const ReduxProjectCardContainer = props => {
     <div>
       {props.redux_projects &&
         props.redux_projects.map((redux_project, index) => {
-          <ReduxProjectCard key={index} redux_project={redux_project} />
+          return (
+            <ReduxProjectCard key={index} redux_project={redux_project} />
+          )
         })}
     </div>
   )

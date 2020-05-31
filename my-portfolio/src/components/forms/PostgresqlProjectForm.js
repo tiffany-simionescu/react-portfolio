@@ -5,7 +5,7 @@ import { addPostgresqlProject } from '../../actions/postgresqlProjectActions';
 // Update style later
 
 const PostgresqlProjectForm = props => {
-  const [postgresqlProject, setPostgresqlProject] = useState({
+  const [postgresql_project, setPostgresqlProject] = useState({
     postgresql_project_image: "",
     postgresql_project_title: "",
     postgresql_project_description: "",
@@ -15,13 +15,13 @@ const PostgresqlProjectForm = props => {
 
   const handleChange = e => {
     setPostgresqlProject({
-      ...postgresqlProject,
+      ...postgresql_project,
       [e.target.name]: e.target.value
     });
 
   const handleSubmit = e => {
     e.preventDefault();
-    props.addPostgresqlProject(postgresqlProject, props.postgresql_project_id);
+    props.addPostgresqlProject(postgresql_project, props.postgresql_project_id);
     setPostgresqlProject({
       postgresql_project_image: "",
       postgresql_project_title: "",

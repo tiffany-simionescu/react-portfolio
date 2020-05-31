@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { fetchPostgresqlProjects } from '../../actions/postgresqlProjectActions';
 import PostgresqlProjectCard from '../project_cards/PostgresqlProjectCard';
+import PostgresqlProjectForm from '../forms/PostgresqlProjectForm';
 
 const PostgresqlProjectCardContainer = props => {
   useEffect(() => {
@@ -12,7 +13,9 @@ const PostgresqlProjectCardContainer = props => {
     <div>
       {props.postgresql_projects &&
         props.postgresql_projects.map((postgresql_project, index) => {
-          <PostgresqlProjectCard key={index} postgresql_project={postgresql_project} />
+          return (
+            <PostgresqlProjectCard key={index} postgresql_project={postgresql_project} />
+          )
         })}
     </div>
   )

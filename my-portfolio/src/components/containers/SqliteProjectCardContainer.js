@@ -12,7 +12,9 @@ const SqliteProjectCardContainer = props => {
     <div>
       {props.sqlite_projects &&
         props.sqlite_projects.map((sqlite_project, index) => {
-          <SqliteProjectCard key={index} sqlite_project={sqlite_project} />
+          return (
+            <SqliteProjectCard key={index} sqlite_project={sqlite_project} />
+          )
         })}
     </div>
   )

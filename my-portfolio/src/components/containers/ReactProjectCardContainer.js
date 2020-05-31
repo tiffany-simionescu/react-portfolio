@@ -12,7 +12,9 @@ const ReactProjectCardContainer = props => {
     <div>
       {props.react_projects &&
         props.react_projects.map((react_project, index) => {
-          <ReactProjectCard key={index} react_project={react_project} />
+          return (
+            <ReactProjectCard key={index} react_project={react_project} />
+          )
         })}
     </div>
   )

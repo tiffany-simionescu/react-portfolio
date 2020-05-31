@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import ReactProjectCardContainer from './containers/ReactProjectCardContainer';
-import ReactProjectCardContainer from './containers/ReduxProjectCardContainer';
+import ReduxProjectCardContainer from './containers/ReduxProjectCardContainer';
 import NodeProjectCardContainer from './containers/NodeProjectCardContainer';
 import SqliteProjectCardContainer from './containers/SqliteProjectCardContainer';
 import PostgresqlProjectCardContainer from './containers/PostgresqlProjectCardContainer';
@@ -22,7 +22,6 @@ import PostgresqlProjectCardContainer from './containers/PostgresqlProjectCardCo
 
 // React Mdl 
 import { Tabs, Tab, Grid, Cell } from 'react-mdl';
-import ReduxProjectCardContainer from './containers/ReduxProjectCardContainer';
 
 class Projects extends Component {
   constructor(props) {
@@ -46,7 +45,7 @@ class Projects extends Component {
             this.props.react_projects.map((react_project, index) => (
               <ReactProjectCard key={index} react_project={react_project} />
             ))} */}
-          <ReactProjectCardContainer react_project_id={this.props.react_project.react_project_id} />
+          <ReactProjectCardContainer react_project_id={this.props.react_project_id} />
           <Link to="/projects/react" className="project-button">Add React Project</Link>
         </div>
       )
@@ -64,7 +63,7 @@ class Projects extends Component {
             this.props.redux_projects.map((redux_project, index) => (
               <ReduxProjectCard key={index} redux_project={redux_project} />
             ))} */}
-          <ReduxProjectCardContainer redux_project_id={this.props.redux_project.redux_project_id} />
+          <ReduxProjectCardContainer redux_project_id={this.props.redux_project_id} />
           <Link to="/projects/redux" className="project-button">Add Redux Project</Link>
         </div>
       )
@@ -82,7 +81,7 @@ class Projects extends Component {
             this.props.node_projects.map((node_project, index) => (
               <NodeProjectCard key={index} node_project={node_project} />
             ))} */}
-            <NodeProjectCardContainer node_project_id={this.props.node_project.node_project_id} />
+            <NodeProjectCardContainer node_project_id={this.props.node_project_id} />
             <Link to="/projects/node" className="project-button">Add Node Project</Link>
         </div>
       )
@@ -100,7 +99,7 @@ class Projects extends Component {
           this.props.sqlite_projects.map((sqlite_project, index) => (
             <SqliteProjectCard key={index} sqlite_project={sqlite_project} />
           ))} */}
-        <SqliteProjectCardContainer sqlite_project_id={this.props.sqlite_project.sqlite_project_id} />
+        <SqliteProjectCardContainer sqlite_project_id={this.props.sqlite_project_id} />
         <Link to="/projects/sqlite" className="project-button">Add Sqlite Project</Link>
       </div>
     )
@@ -118,7 +117,7 @@ class Projects extends Component {
           this.props.postgresql_projects.map((postgresql_project, index) => (
             <PostgresqlProjectCard key={index} postgresql_project={postgresql_project} />
           ))} */}
-        <PostgresqlProjectCardContainer postgresql_project_id={this.props.postgresql_project.postgresql_project_id} />
+        <PostgresqlProjectCardContainer postgresql_project_id={this.props.postgresql_project_id} />
         <Link to="/projects/postgresql" className="project-button">Add PostgreSQL Project</Link>
       </div>
     )
