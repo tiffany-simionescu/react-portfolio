@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { login } from '../actions/userActions';
+import { login } from '../../actions/userActions';
 
 // Add Style later
 
@@ -10,7 +10,7 @@ const LoginForm = props => {
     password: ""
   });
 
-  const handleChanges = e => {
+  const handleChange = e => {
     setUser({
       ...user,
       [e.target.name]: e.target.value
@@ -32,7 +32,7 @@ const LoginForm = props => {
           name="username"
           placeholder="Username"
           value={user.username}
-          onChange={handleChanges}
+          onChange={handleChange}
         />
         <label>Password</label>
         <input 
@@ -40,7 +40,7 @@ const LoginForm = props => {
           name="password"
           placeholder="Password"
           value={user.password}
-          onChange={handleChanges} 
+          onChange={handleChange} 
         />
         <button type="submit">Login</button>
       </form>

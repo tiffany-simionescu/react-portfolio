@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { registerUser } from '../actions/userActions';
+import { registerUser } from '../../actions/userActions';
 
 // Add style later
 
