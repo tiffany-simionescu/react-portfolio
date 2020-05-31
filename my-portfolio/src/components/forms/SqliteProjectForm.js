@@ -24,7 +24,7 @@ const SqliteProjectForm = props => {
 
   return (
     <div>
-      <h2>Add A New Sqlite Project</h2>
+      <h2>New Sqlite Project</h2>
       <form onSubmit={handleSubmit}>
         <label>Image URL</label>
         <input 

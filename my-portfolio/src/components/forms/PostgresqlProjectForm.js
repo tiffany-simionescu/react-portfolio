@@ -24,7 +24,7 @@ const PostgresqlProjectForm = props => {
 
   return (
     <div>
-      <h2>Add A New Postgresql Project</h2>
+      <h2>New Postgresql Project</h2>
       <form onSubmit={handleSubmit}>
         <label>Image URL</label>
         <input 

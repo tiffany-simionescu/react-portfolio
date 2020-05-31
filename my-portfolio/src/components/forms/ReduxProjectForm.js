@@ -24,7 +24,7 @@ const ReduxProjectForm = props => {
 
   return (
     <div>
-      <h2>Add A New Redux Project</h2>
+      <h2>New Redux Project</h2>
       <form onSubmit={handleSubmit}>
         <label>Image URL</label>
         <input 

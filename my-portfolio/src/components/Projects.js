@@ -41,6 +41,7 @@ class Projects extends Component {
             ))} */}
           <ReactProjectCardContainer react_project_id={this.props.react_project_id} />
           <Link to="/projects/react" className="project-button">Add React Project</Link>
+          <Route path="/projects/react" component={ReactProjectForm} />
         </div>
       )
 
@@ -59,6 +60,7 @@ class Projects extends Component {
             ))} */}
           <ReduxProjectCardContainer redux_project_id={this.props.redux_project_id} />
           <Link to="/projects/redux" className="project-button">Add Redux Project</Link>
+          <Route path="/projects/redux" component={ReduxProjectForm} />
         </div>
       )
 
@@ -77,7 +79,7 @@ class Projects extends Component {
             ))} */}
             <NodeProjectCardContainer node_project_id={this.props.node_project_id} />
             <Link to="/projects/node" className="project-button">Add Node Project</Link>
-            
+            <Route path="/projects/node" component={NodeProjectForm} />
         </div>
       )
 
@@ -96,6 +98,7 @@ class Projects extends Component {
           ))} */}
         <SqliteProjectCardContainer sqlite_project_id={this.props.sqlite_project_id} />
         <Link to="/projects/sqlite" className="project-button">Add Sqlite Project</Link>
+        <Route path="/projects/sqlite" component={SqliteProjectForm} />
       </div>
     )
 
@@ -114,6 +117,7 @@ class Projects extends Component {
           ))} */}
         <PostgresqlProjectCardContainer postgresql_project_id={this.props.postgresql_project_id} />
         <Link to="/projects/postgresql" className="project-button">Add PostgreSQL Project</Link>
+        <Route path="/projects/postgresql" component={PostgresqlProjectForm} />
       </div>
     )
     }
@@ -134,11 +138,6 @@ class Projects extends Component {
             <Cell col={12}>
               <div className="content">
                 {this.toggleCategories()}
-                <Route path="/projects/react" component={ReactProjectForm} />
-                <Route path="/projects/redux" component={ReduxProjectForm} />
-                <Route path="/projects/node" component={NodeProjectForm} />
-                <Route path="/projects/sqlite" component={SqliteProjectForm} />
-                <Route path="/projects/postgresql" component={PostgresqlProjectForm} />
               </div>
             </Cell>
           </Grid>

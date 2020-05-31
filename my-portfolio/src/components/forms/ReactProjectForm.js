@@ -24,7 +24,7 @@ const ReactProjectForm = props => {
 
   return (
     <div>
-      <h2>Add A New React Project</h2>
+      <h2>New React Project</h2>
       <form onSubmit={handleSubmit}>
         <label>Image URL</label>
         <input 

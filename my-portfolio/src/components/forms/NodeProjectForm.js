@@ -24,7 +24,7 @@ const NodeProjectForm = props => {
 
   return (
     <div>
-      <h2>Add A New Node Project</h2>
+      <h2>New Node Project</h2>
       <form onSubmit={handleSubmit}>
         <label>Image URL</label>
         <input 
