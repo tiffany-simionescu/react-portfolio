@@ -5,6 +5,12 @@ import AboutMe from './AboutMe';
 import Contact from './Contact';
 import Projects from './Projects';
 import Resume from './resume/Resume';
+import LoginForm from './forms/LoginForm';
+import ReactProjectForm from './forms/ReactProjectForm';
+import ReduxProjectForm from './forms/ReduxProjectForm';
+import NodeProjectForm from './forms/NodeProjectForm';
+import SqliteProjectForm from './forms/SqliteProjectForm';
+import PostgresqlProjectForm from './forms/PostgresqlProjectForm';
 
 const Main = () => (
   <Switch>
@@ -13,6 +19,12 @@ const Main = () => (
     <Route path="/contact" component={Contact} />
     <Route path="/projects" component={Projects} />
     <Route path="/resume" component={Resume} />
+    <Route path="/login" component={LoginForm} />
+    <Route path="/projects/react" component={ReactProjectForm} />
+    <Route path="/projects/redux" component={ReduxProjectForm} />
+    <Route path="/projects/node" component={NodeProjectForm} />
+    <Route path="/projects/sqlite" component={SqliteProjectForm} />
+    <Route path="/projects/postgresql" component={PostgresqlProjectForm} />
   </Switch>
 )
 

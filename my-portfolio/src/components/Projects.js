@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import ReactProjectCardContainer from './containers/ReactProjectCardContainer';
 import ReactProjectCardContainer from './containers/ReduxProjectCardContainer';
@@ -46,6 +47,7 @@ class Projects extends Component {
               <ReactProjectCard key={index} react_project={react_project} />
             ))} */}
           <ReactProjectCardContainer react_project_id={this.props.react_project.react_project_id} />
+          <Link to="/projects/react" className="project-button">Add React Project</Link>
         </div>
       )
 
@@ -63,6 +65,7 @@ class Projects extends Component {
               <ReduxProjectCard key={index} redux_project={redux_project} />
             ))} */}
           <ReduxProjectCardContainer redux_project_id={this.props.redux_project.redux_project_id} />
+          <Link to="/projects/redux" className="project-button">Add Redux Project</Link>
         </div>
       )
 
@@ -80,6 +83,7 @@ class Projects extends Component {
               <NodeProjectCard key={index} node_project={node_project} />
             ))} */}
             <NodeProjectCardContainer node_project_id={this.props.node_project.node_project_id} />
+            <Link to="/projects/node" className="project-button">Add Node Project</Link>
         </div>
       )
 
@@ -97,6 +101,7 @@ class Projects extends Component {
             <SqliteProjectCard key={index} sqlite_project={sqlite_project} />
           ))} */}
         <SqliteProjectCardContainer sqlite_project_id={this.props.sqlite_project.sqlite_project_id} />
+        <Link to="/projects/sqlite" className="project-button">Add Sqlite Project</Link>
       </div>
     )
 
@@ -114,6 +119,7 @@ class Projects extends Component {
             <PostgresqlProjectCard key={index} postgresql_project={postgresql_project} />
           ))} */}
         <PostgresqlProjectCardContainer postgresql_project_id={this.props.postgresql_project.postgresql_project_id} />
+        <Link to="/projects/postgresql" className="project-button">Add PostgreSQL Project</Link>
       </div>
     )
     }
