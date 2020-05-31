@@ -6,6 +6,7 @@ import Contact from './Contact';
 import Projects from './Projects';
 import Resume from './resume/Resume';
 import LoginForm from './forms/LoginForm';
+import RegisterForm from './forms/RegisterForm';
 import ReactProjectForm from './forms/ReactProjectForm';
 import ReduxProjectForm from './forms/ReduxProjectForm';
 import NodeProjectForm from './forms/NodeProjectForm';
@@ -20,6 +21,7 @@ const Main = () => (
     <Route path="/projects" component={Projects} />
     <Route path="/resume" component={Resume} />
     <Route path="/login" component={LoginForm} />
+    <Route path="/register" component={RegisterForm} />
     <Route path="/projects/react" component={ReactProjectForm} />
     <Route path="/projects/redux" component={ReduxProjectForm} />
     <Route path="/projects/node" component={NodeProjectForm} />
