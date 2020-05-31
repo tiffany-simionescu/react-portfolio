@@ -64,8 +64,27 @@ export const fetchReduxProject = redux_project_id => dispatch => {
     });
 };
 
-export const addReduxProject = redux_project => dispatch => {
-  dispatch({ type: POST_INITIALIZE })
+// export const addReduxProject = redux_project => dispatch => {
+//   dispatch({ type: POST_INITIALIZE })
+
+//   axiosWithAuth()
+//     .post('/api/reduxprojects', redux_project)
+//     .then(res => {
+//       dispatch({
+//         type: ADD_REDUX_PROJECT_SUCCESS,
+//         payload: res.data
+//       });
+//     })
+//     .catch(err => {
+//       dispatch({
+//         type: ADD_REDUX_PROJECT_FAILURE,
+//         payload: { err, message: err.message }
+//       });
+//     });
+// };
+
+export const addReduxProject = (redux_project, props) => dispatch => {
+  dispatch({ type: POST_INITIALIZE });
 
   axiosWithAuth()
     .post('/api/reduxprojects', redux_project)
@@ -74,12 +93,14 @@ export const addReduxProject = redux_project => dispatch => {
         type: ADD_REDUX_PROJECT_SUCCESS,
         payload: res.data
       });
+      props.history.push("/api/projects");
     })
     .catch(err => {
       dispatch({
         type: ADD_REDUX_PROJECT_FAILURE,
         payload: { err, message: err.message }
       });
+      toast.error(err.message);
     });
 };
 

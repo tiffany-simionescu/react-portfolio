@@ -64,8 +64,26 @@ export const fetchNodeProject = node_project_id => dispatch => {
     });
 };
 
-export const addNodeProject = node_project => dispatch => {
-  dispatch({ type: POST_INITIALIZE })
+// export const addNodeProject = node_project => dispatch => {
+//   dispatch({ type: POST_INITIALIZE })
+
+//   axiosWithAuth()
+//     .post('/api/nodeprojects', node_project)
+//     .then(res => {
+//       dispatch({
+//         type: ADD_NODE_PROJECT_SUCCESS,
+//         payload: res.data
+//       });
+//     })
+//     .catch(err => {
+//       dispatch({
+//         type: ADD_NODE_PROJECT_FAILURE,
+//         payload: { err, message: err.message }
+//       });
+//     });
+// };
+export const addNodeProject = (node_project, props) => dispatch => {
+  dispatch({ type: POST_INITIALIZE });
 
   axiosWithAuth()
     .post('/api/nodeprojects', node_project)
@@ -74,12 +92,14 @@ export const addNodeProject = node_project => dispatch => {
         type: ADD_NODE_PROJECT_SUCCESS,
         payload: res.data
       });
+      props.history.push("/api/projects");
     })
     .catch(err => {
       dispatch({
         type: ADD_NODE_PROJECT_FAILURE,
         payload: { err, message: err.message }
       });
+      toast.error(err.message);
     });
 };
 

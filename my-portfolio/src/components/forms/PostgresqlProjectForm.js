@@ -14,21 +14,12 @@ const PostgresqlProjectForm = props => {
   });
 
   const handleChange = e => {
-    setPostgresqlProject({
-      ...postgresql_project,
-      [e.target.name]: e.target.value
-    });
+    setPostgresqlProject({ ...postgresql_project, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = e => {
     e.preventDefault();
-    props.addPostgresqlProject(postgresql_project, props.postgresql_project_id);
-    setPostgresqlProject({
-      postgresql_project_image: "",
-      postgresql_project_title: "",
-      postgresql_project_description: "",
-      postgresql_project_github_link: "",
-      postgresql_project_live_link: ""
-    });
+    props.addPostgresqlProject(postgresql_project, props);
   };
 
   return (
@@ -79,12 +70,11 @@ const PostgresqlProjectForm = props => {
       </form>
     </div>
     )};
-};
 
-const mapStateToProps = state => {
-  return {
-    postgresql_project_id: state.postgresql_project.postgresql_project_id
-  };
-};
-
-export default connect(mapStateToProps, { addPostgresqlProject })(PostgresqlProjectForm);
+    const mapStateToProps = state => {
+      return {
+        postgresql_project_id: state.postgresql_project_id
+      };
+    };
+    
+    export default connect(mapStateToProps, { addPostgresqlProject })(PostgresqlProjectForm);

@@ -64,8 +64,26 @@ export const fetchReactProject = react_project_id => dispatch => {
     });
 };
 
-export const addReactProject = react_project => dispatch => {
-  dispatch({ type: POST_INITIALIZE })
+// export const addReactProject = react_project => dispatch => {
+//   dispatch({ type: POST_INITIALIZE })
+
+//   axiosWithAuth()
+//     .post('/api/reactprojects', react_project)
+//     .then(res => {
+//       dispatch({
+//         type: ADD_REACT_PROJECT_SUCCESS,
+//         payload: res.data
+//       });
+//     })
+//     .catch(err => {
+//       dispatch({
+//         type: ADD_REACT_PROJECT_FAILURE,
+//         payload: { err, message: err.message }
+//       });
+//     });
+// };
+export const addReactProject = (react_project, props) => dispatch => {
+  dispatch({ type: POST_INITIALIZE });
 
   axiosWithAuth()
     .post('/api/reactprojects', react_project)
@@ -74,12 +92,14 @@ export const addReactProject = react_project => dispatch => {
         type: ADD_REACT_PROJECT_SUCCESS,
         payload: res.data
       });
+      props.history.push("/api/projects");
     })
     .catch(err => {
       dispatch({
         type: ADD_REACT_PROJECT_FAILURE,
         payload: { err, message: err.message }
       });
+      toast.error(err.message);
     });
 };
 

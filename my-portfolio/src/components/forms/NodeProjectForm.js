@@ -14,21 +14,12 @@ const NodeProjectForm = props => {
   });
 
   const handleChange = e => {
-    setNodeProject({
-      ...node_project,
-      [e.target.name]: e.target.value
-    });
+    setNodeProject({ ...node_project, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = e => {
     e.preventDefault();
-    props.addNodeProject(node_project, props.node_project_id);
-    setNodeProject({
-      node_project_image: "",
-      node_project_title: "",
-      node_project_description: "",
-      node_project_github_link: "",
-      node_project_live_link: ""
-    });
+    props.addNodeProject(node_project, props);
   };
 
   return (
@@ -79,12 +70,11 @@ const NodeProjectForm = props => {
       </form>
     </div>
     )};
-};
 
-const mapStateToProps = state => {
-  return {
-    node_project_id: state.node_project.node_project_id
-  };
-};
-
-export default connect(mapStateToProps, { addNodeProject })(NodeProjectForm);
+    const mapStateToProps = state => {
+      return {
+        node_project_id: state.node_project_id
+      };
+    };
+    
+    export default connect(mapStateToProps, { addNodeProject })(NodeProjectForm);

@@ -14,21 +14,12 @@ const ReactProjectForm = props => {
   });
 
   const handleChange = e => {
-    setReactProject({
-      ...react_project,
-      [e.target.name]: e.target.value
-    });
+    setReactProject({ ...react_project, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = e => {
     e.preventDefault();
-    props.addReactProject(react_project, props.react_project_id);
-    setReactProject({
-      react_project_image: "",
-      react_project_title: "",
-      react_project_description: "",
-      react_project_github_link: "",
-      react_project_live_link: ""
-    });
+    props.addReactProject(react_project, props);
   };
 
   return (
@@ -78,12 +69,12 @@ const ReactProjectForm = props => {
         <button type="submit">Add React Project</button>
       </form>
     </div>
-    )};
-};
+    );
+  };
 
 const mapStateToProps = state => {
   return {
-    react_project_id: state.react_project.react_project_id
+    react_project_id: state.react_project_id
   };
 };
 

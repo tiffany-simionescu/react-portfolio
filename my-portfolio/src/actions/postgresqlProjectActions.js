@@ -64,22 +64,43 @@ export const fetchPostgresqlProject = postgresql_project_id => dispatch => {
     });
 };
 
-export const addPostgresqlProject = postgresql_project => dispatch => {
-  dispatch({ type: POST_INITIALIZE })
+// export const addPostgresqlProject = postgresql_project => dispatch => {
+//   dispatch({ type: POST_INITIALIZE })
+
+//   axiosWithAuth()
+//     .post('/api/pgprojects', postgresql_project)
+//     .then(res => {
+//       dispatch({
+//         type: ADD_POSTGRESQL_PROJECT_SUCCESS,
+//         payload: res.data
+//       });
+//     })
+//     .catch(err => {
+//       dispatch({
+//         type: ADD_POSTGRESQL_PROJECT_FAILURE,
+//         payload: { err, message: err.message }
+//       });
+//     });
+// };
+
+export const addPostgresqlProject = (postgresql_project, props) => dispatch => {
+  dispatch({ type: POST_INITIALIZE });
 
   axiosWithAuth()
-    .post('/api/pgprojects', postgresql_project)
+    .post('/api/postgresqlprojects', postgresql_project)
     .then(res => {
       dispatch({
         type: ADD_POSTGRESQL_PROJECT_SUCCESS,
         payload: res.data
       });
+      props.history.push("/api/projects");
     })
     .catch(err => {
       dispatch({
         type: ADD_POSTGRESQL_PROJECT_FAILURE,
         payload: { err, message: err.message }
       });
+      toast.error(err.message);
     });
 };
 

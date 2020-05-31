@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 
 import ReactProjectCardContainer from './containers/ReactProjectCardContainer';
 import ReduxProjectCardContainer from './containers/ReduxProjectCardContainer';
@@ -8,17 +8,11 @@ import NodeProjectCardContainer from './containers/NodeProjectCardContainer';
 import SqliteProjectCardContainer from './containers/SqliteProjectCardContainer';
 import PostgresqlProjectCardContainer from './containers/PostgresqlProjectCardContainer';
 
-// import ReactProjectCard from './project_cards/ReactProjectCard';
-// import ReduxProjectCard from './project_cards/ReduxProjectCard';
-// import NodeProjectCard from './project_cards/NodeProjectCard';
-// import SqliteProjectCard from './project_cards/SqliteProjectCard';
-// import PostgresqlProjectCard from './project_cards/PostgresqlProjectCard';
-
-// import { fetchReactProjects} from '../actions/reactProjectActions';
-// import { fetchReduxProjects } from '../actions/reduxProjectActions';
-// import { fetchNodeProjects } from '../actions/nodeProjectActions';
-// import { fetchSqliteProjects } from '../actions/sqliteProjectActions';
-// import { fetchPostgresqlProjects } from '../actions/postgresqlProjectActions';
+import ReactProjectForm from './forms/ReactProjectForm';
+import ReduxProjectForm from './forms/ReduxProjectForm';
+import NodeProjectForm from './forms/NodeProjectForm';
+import SqliteProjectForm from './forms/SqliteProjectForm';
+import PostgresqlProjectForm from './forms/PostgresqlProjectForm';
 
 // React Mdl 
 import { Tabs, Tab, Grid, Cell } from 'react-mdl';
@@ -83,6 +77,7 @@ class Projects extends Component {
             ))} */}
             <NodeProjectCardContainer node_project_id={this.props.node_project_id} />
             <Link to="/projects/node" className="project-button">Add Node Project</Link>
+            
         </div>
       )
 
@@ -139,6 +134,11 @@ class Projects extends Component {
             <Cell col={12}>
               <div className="content">
                 {this.toggleCategories()}
+                <Route path="/projects/react" component={ReactProjectForm} />
+                <Route path="/projects/redux" component={ReduxProjectForm} />
+                <Route path="/projects/node" component={NodeProjectForm} />
+                <Route path="/projects/sqlite" component={SqliteProjectForm} />
+                <Route path="/projects/postgresql" component={PostgresqlProjectForm} />
               </div>
             </Cell>
           </Grid>

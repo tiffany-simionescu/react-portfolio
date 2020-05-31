@@ -14,21 +14,12 @@ const SqliteProjectForm = props => {
   });
 
   const handleChange = e => {
-    setSqliteProject({
-      ...sqlite_project,
-      [e.target.name]: e.target.value
-    });
+    setSqliteProject({ ...sqlite_project, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = e => {
     e.preventDefault();
-    props.addSqliteProject(sqlite_project, props.sqlite_project_id);
-    setSqliteProject({
-      sqlite_project_image: "",
-      sqlite_project_title: "",
-      sqlite_project_description: "",
-      sqlite_project_github_link: "",
-      sqlite_project_live_link: ""
-    });
+    props.addSqliteProject(sqlite_project, props);
   };
 
   return (
@@ -79,12 +70,11 @@ const SqliteProjectForm = props => {
       </form>
     </div>
     )};
-};
 
-const mapStateToProps = state => {
-  return {
-    sqlite_project_id: state.sqlite_project.sqlite_project_id
-  };
-};
-
-export default connect(mapStateToProps, { addSqliteProject })(SqliteProjectForm);
+    const mapStateToProps = state => {
+      return {
+        sqlite_project_id: state.sqlite_project_id
+      };
+    };
+    
+    export default connect(mapStateToProps, { addSqliteProject })(SqliteProjectForm);

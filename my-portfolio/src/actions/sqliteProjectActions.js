@@ -64,22 +64,43 @@ export const fetchSqliteProject = sqlite_project_id => dispatch => {
     });
 };
 
-export const addSqliteProject = sqlite_project => dispatch => {
-  dispatch({ type: POST_INITIALIZE })
+// export const addSqliteProject = sqlite_project => dispatch => {
+//   dispatch({ type: POST_INITIALIZE })
+
+//   axiosWithAuth()
+//     .post(`/api/sqliteprojects`, sqlite_project)
+//     .then(res => {
+//       dispatch({
+//         type: ADD_SQLITE_PROJECT_SUCCESS,
+//         payload: res.data
+//       });
+//     })
+//     .catch(err => {
+//       dispatch({
+//         type: ADD_SQLITE_PROJECT_FAILURE,
+//         payload: { err, message: err.message }
+//       });
+//     });
+// };
+
+export const addSqliteProject = (sqlite_project, props) => dispatch => {
+  dispatch({ type: POST_INITIALIZE });
 
   axiosWithAuth()
-    .post(`/api/sqliteprojects`, sqlite_project)
+    .post('/api/sqliteprojects', sqlite_project)
     .then(res => {
       dispatch({
         type: ADD_SQLITE_PROJECT_SUCCESS,
         payload: res.data
       });
+      props.history.push("/api/projects");
     })
     .catch(err => {
       dispatch({
         type: ADD_SQLITE_PROJECT_FAILURE,
         payload: { err, message: err.message }
       });
+      toast.error(err.message);
     });
 };
 

@@ -14,21 +14,12 @@ const ReduxProjectForm = props => {
   });
 
   const handleChange = e => {
-    setReduxProject({
-      ...redux_project,
-      [e.target.name]: e.target.value
-    });
+    setReduxProject({ ...redux_project, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = e => {
     e.preventDefault();
-    props.addReduxProject(redux_project, props.redux_project_id);
-    setReduxProject({
-      redux_project_image: "",
-      redux_project_title: "",
-      redux_project_description: "",
-      redux_project_github_link: "",
-      redux_project_live_link: ""
-    });
+    props.addReduxProject(redux_project, props);
   };
 
   return (
@@ -79,11 +70,10 @@ const ReduxProjectForm = props => {
       </form>
     </div>
     )};
-};
 
 const mapStateToProps = state => {
   return {
-    redux_project_id: state.redux_project.redux_project_id
+    redux_project_id: state.redux_project_id
   };
 };
 
