@@ -24,55 +24,60 @@ const PostgresqlProjectForm = props => {
 
   return (
     <div>
-      <h2>New Postgresql Project</h2>
-      <form onSubmit={handleSubmit}>
-        <label>Image URL</label>
-        <input 
-          type="text"
-          name="postgresql_project_image"
-          placeholder="Image URL"
-          value={postgresql_project.postgresql_project_image}
-          onChange={handleChange}
-        />
-        <label>Title</label>
-        <input 
-          type="text"
-          name="postgresql_project_title"
-          placeholder="Project Title"
-          value={postgresql_project.postgresql_project_title}
-          onChange={handleChange}
-        />
-        <label>Description</label>
-        <input 
-          type="text"
-          name="postgresql_project_description"
-          placeholder="Project Description"
-          value={postgresql_project.postgresql_project_description}
-          onChange={handleChange}
-        />
-        <label>Github Link</label>
-        <input 
-          type="text"
-          name="postgresql_project_github_link"
-          placeholder="Github Link"
-          value={postgresql_project.postgresql_project_github_link}
-          onChange={handleChange}
-        />
-        <label>Live Link</label>
-        <input 
-          type="text"
-          name="postgresql_project_live_link"
-          placeholder="Live Link"
-          value={postgresql_project.postgresql_project_live_link}
-          onChange={handleChange}
-        />
-        <button type="submit">Add Postgresql Project</button>
-      </form>
+      <h2>New PostgreSQL Project</h2>
+        {props.loggedIn ? (
+          <form onSubmit={handleSubmit}>
+          <label>Image URL</label>
+          <input 
+            type="text"
+            name="postgresql_project_image"
+            placeholder="Image URL"
+            value={postgresql_project.postgresql_project_image}
+            onChange={handleChange}
+          />
+          <label>Title</label>
+          <input 
+            type="text"
+            name="postgresql_project_title"
+            placeholder="Project Title"
+            value={postgresql_project.postgresql_project_title}
+            onChange={handleChange}
+          />
+          <label>Description</label>
+          <input 
+            type="text"
+            name="postgresql_project_description"
+            placeholder="Project Description"
+            value={postgresql_project.postgresql_project_description}
+            onChange={handleChange}
+          />
+          <label>Github Link</label>
+          <input 
+            type="text"
+            name="postgresql_project_github_link"
+            placeholder="Github Link"
+            value={postgresql_project.postgresql_project_github_link}
+            onChange={handleChange}
+          />
+          <label>Live Link</label>
+          <input 
+            type="text"
+            name="postgresql_project_live_link"
+            placeholder="Live Link"
+            value={postgresql_project.postgresql_project_live_link}
+            onChange={handleChange}
+          />
+          <button type="submit">Add PostgreSQL Project</button>
+        </form>
+        ) : (
+          <h4>Only the Admin can add a new PostgreSQL Project.</h4>
+        )}
     </div>
     )};
 
     const mapStateToProps = state => {
       return {
+        loggedIn: state.isLoggedIn,
         postgresql_project_id: state.postgresql_project_id
       };
     };

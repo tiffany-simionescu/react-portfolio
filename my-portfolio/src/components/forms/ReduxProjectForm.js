@@ -25,54 +25,59 @@ const ReduxProjectForm = props => {
   return (
     <div>
       <h2>New Redux Project</h2>
-      <form onSubmit={handleSubmit}>
-        <label>Image URL</label>
-        <input 
-          type="text"
-          name="redux_project_image"
-          placeholder="Image URL"
-          value={redux_project.redux_project_image}
-          onChange={handleChange}
-        />
-        <label>Title</label>
-        <input 
-          type="text"
-          name="redux_project_title"
-          placeholder="Project Title"
-          value={redux_project.redux_project_title}
-          onChange={handleChange}
-        />
-        <label>Description</label>
-        <input 
-          type="text"
-          name="redux_project_description"
-          placeholder="Project Description"
-          value={redux_project.redux_project_description}
-          onChange={handleChange}
-        />
-        <label>Github Link</label>
-        <input 
-          type="text"
-          name="redux_project_github_link"
-          placeholder="Github Link"
-          value={redux_project.redux_project_github_link}
-          onChange={handleChange}
-        />
-        <label>Live Link</label>
-        <input 
-          type="text"
-          name="redux_project_live_link"
-          placeholder="Live Link"
-          value={redux_project.redux_project_live_link}
-          onChange={handleChange}
-        />
-        <button type="submit">Add Redux Project</button>
-      </form>
+        {props.loggedIn ? (
+          <form onSubmit={handleSubmit}>
+          <label>Image URL</label>
+          <input 
+            type="text"
+            name="redux_project_image"
+            placeholder="Image URL"
+            value={redux_project.redux_project_image}
+            onChange={handleChange}
+          />
+          <label>Title</label>
+          <input 
+            type="text"
+            name="redux_project_title"
+            placeholder="Project Title"
+            value={redux_project.redux_project_title}
+            onChange={handleChange}
+          />
+          <label>Description</label>
+          <input 
+            type="text"
+            name="redux_project_description"
+            placeholder="Project Description"
+            value={redux_project.redux_project_description}
+            onChange={handleChange}
+          />
+          <label>Github Link</label>
+          <input 
+            type="text"
+            name="redux_project_github_link"
+            placeholder="Github Link"
+            value={redux_project.redux_project_github_link}
+            onChange={handleChange}
+          />
+          <label>Live Link</label>
+          <input 
+            type="text"
+            name="redux_project_live_link"
+            placeholder="Live Link"
+            value={redux_project.redux_project_live_link}
+            onChange={handleChange}
+          />
+          <button type="submit">Add Redux Project</button>
+        </form>
+        ) : (
+          <h4>Only the Admin can add a new Redux Project.</h4>
+        )}
     </div>
     )};
 
 const mapStateToProps = state => {
   return {
+    loggedIn: state.isLoggedIn,
     redux_project_id: state.redux_project_id
   };
 };
