@@ -69,14 +69,12 @@ const RegisterForm = props => {
         />
         <label>Phone Number</label>
         <input
-          type="tel"
+          type="number"
           placeholder="Phone Number"
           name="phone_number"
-          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
           value={user.phone_number}
           onChange={handleChange}
         />
-        <p>Format: 123-456-7890</p>
 
         <button type="submit">Register</button>
       </form>
@@ -84,10 +82,4 @@ const RegisterForm = props => {
   );
 };
 
-const mapStateToProps = state => {
-  return {
-    loggedIn: state.isLoggedIn
-  };
-};
-
-export default connect(mapStateToProps, { registerUser })(RegisterForm);
+export default connect(null, { registerUser })(RegisterForm);

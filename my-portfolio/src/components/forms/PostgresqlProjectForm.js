@@ -25,7 +25,7 @@ const PostgresqlProjectForm = props => {
   return (
     <div>
       <h2>New PostgreSQL Project</h2>
-        {props.loggedIn ? (
+        {localStorage.getItem('token') ? (
           <form onSubmit={handleSubmit}>
           <label>Image URL</label>
           <input 
@@ -77,7 +77,7 @@ const PostgresqlProjectForm = props => {
 
     const mapStateToProps = state => {
       return {
-        loggedIn: state.isLoggedIn,
+        // loggedIn: state.isLoggedIn,
         postgresql_project_id: state.postgresql_project_id
       };
     };

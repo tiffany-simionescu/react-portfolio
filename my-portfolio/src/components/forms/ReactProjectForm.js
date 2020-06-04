@@ -25,7 +25,7 @@ const ReactProjectForm = props => {
   return (
     <div>
       <h2>New React Project</h2>
-        {props.loggedIn ? (
+        {localStorage.getItem('token') ? (
           <form onSubmit={handleSubmit}>
           <label>Image URL</label>
           <input 
@@ -78,7 +78,7 @@ const ReactProjectForm = props => {
 
 const mapStateToProps = state => {
   return {
-    loggedIn: state.isLoggedIn,
+    // loggedIn: state.isLoggedIn,
     react_project_id: state.react_project_id
   };
 };

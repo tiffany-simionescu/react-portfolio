@@ -20,8 +20,8 @@ function App(props) {
                   <Link to="/projects">Projects</Link>
                   <Link to="/contact">Contact</Link>
                   <Link to="/register">Register</Link>
-                  {props.loggedIn ? (
-                    <Link to="/" onClick={() => props.logout()}>Logout</Link>
+                  {localStorage.getItem('token') ? (
+                    <Link to="/" onClick={() => localStorage.removeItem('token')}>Logout</Link>
                   ) : (
                     <Link to="/login">Login</Link>
                   )}
@@ -35,8 +35,8 @@ function App(props) {
                   <Link to="/projects">Projects</Link>
                   <Link to="/contact">Contact</Link>
                   <Link to="/register">Register</Link>
-                  {props.loggedIn ? (
-                    <Link to="/" onClick={() => props.logout()}>Logout</Link>
+                  {localStorage.getItem('token') ? (
+                    <Link to="/" onClick={() => localStorage.removeItem('token')}>Logout</Link>
                   ) : (
                     <Link to="/login">Login</Link>
                   )}

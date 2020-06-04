@@ -88,7 +88,7 @@ const userReducer = (state = initialState, action) => {
         error: "",
         isSubmitting: false,
         user: {
-          user_id: action.payload.user_id[0],
+          user_id: action.payload.id[0],
           username: action.payload.user.username,
           password: action.payload.user.password,
           first_name: action.payload.user.first_name,
@@ -96,7 +96,7 @@ const userReducer = (state = initialState, action) => {
           email: action.payload.user.email,
           phone_number:action.payload.user.phone_number
         },
-        isLoggedIn:true
+        isLoggedIn:false
       };
 
     case ADD_USER_FAILURE:

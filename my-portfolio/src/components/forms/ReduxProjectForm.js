@@ -25,7 +25,7 @@ const ReduxProjectForm = props => {
   return (
     <div>
       <h2>New Redux Project</h2>
-        {props.loggedIn ? (
+        {localStorage.getItem('token') ? (
           <form onSubmit={handleSubmit}>
           <label>Image URL</label>
           <input 
@@ -77,7 +77,7 @@ const ReduxProjectForm = props => {
 
 const mapStateToProps = state => {
   return {
-    loggedIn: state.isLoggedIn,
+    // loggedIn: state.isLoggedIn,
     redux_project_id: state.redux_project_id
   };
 };

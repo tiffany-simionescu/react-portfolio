@@ -39,7 +39,7 @@ export const registerUser = (user, props) => dispatch => {
         type: ADD_USER_SUCCESS,
         payload: res.data
       });
-      props.history.push("/api/users/login");
+      props.history.push("/login");
     })
     .catch(err => {
       dispatch({
@@ -47,6 +47,7 @@ export const registerUser = (user, props) => dispatch => {
         payload: { err, message: err.message }
       });
       toast.error(err.message);
+      props.history.push("/login");
     });
 };
 
@@ -60,7 +61,7 @@ export const login = (user, props) => dispatch => {
         type: LOGIN_SUCCESS,
         payload: res.data.user
       });
-      localStorage.setItem("token", res.data.token);
+      localStorage.setItem("token", res.data.authToken);
       props.history.push('/');
     })
     .catch(err => {
