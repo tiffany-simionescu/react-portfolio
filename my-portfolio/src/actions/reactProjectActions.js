@@ -92,7 +92,7 @@ export const addReactProject = (react_project, props) => dispatch => {
         type: ADD_REACT_PROJECT_SUCCESS,
         payload: res.data
       });
-      props.history.push("/api/projects");
+      props.history.push("/projects");
     })
     .catch(err => {
       dispatch({

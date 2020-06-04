@@ -93,7 +93,7 @@ export const addPostgresqlProject = (postgresql_project, props) => dispatch => {
         type: ADD_POSTGRESQL_PROJECT_SUCCESS,
         payload: res.data
       });
-      props.history.push("/api/projects");
+      props.history.push("/projects");
     })
     .catch(err => {
       dispatch({

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Route, Link } from 'react-router-dom';
 
@@ -35,11 +35,12 @@ class Projects extends Component {
 
       return (
         <div className="projects-grid">
-          {/* {this.props.react_projects &&
+          {this.props.react_projects &&
             this.props.react_projects.map((react_project, index) => (
-              <ReactProjectCard key={index} react_project={react_project} />
-            ))} */}
-          <ReactProjectCardContainer react_project_id={this.props.react_project_id} />
+              // <ReactProjectCard key={index} react_project={react_project} />
+              <ReactProjectCardContainer react_project-id={index} react_project={react_project} />
+            ))}
+          {/* <ReactProjectCardContainer react_project_id={this.props.react_project_id} /> */}
           <Link to="/projects/react" className="project-button">Add React Project</Link>
           <Route path="/projects/react" component={ReactProjectForm} />
         </div>
