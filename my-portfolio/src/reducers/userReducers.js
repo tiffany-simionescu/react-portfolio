@@ -21,9 +21,7 @@ import {
   FETCH_USERS_FAILURE,
 
   // == Login Actions == //
-  LOGIN_START,
   LOGIN_SUCCESS,
-  LOGIN_FAIL,
 
   // == Logout Action == //
   LOGOUT

@@ -1,8 +1,6 @@
-import React, { Component, useEffect } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Route, Link } from 'react-router-dom';
-
-import ReactProjectCard from './project_cards/ReactProjectCard';
 
 import ReactProjectCardContainer from './containers/ReactProjectCardContainer';
 import ReduxProjectCardContainer from './containers/ReduxProjectCardContainer';

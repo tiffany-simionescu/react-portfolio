@@ -1,8 +1,8 @@
 import React from 'react';
 import '../App.css';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { logout } from '../actions/userActions';
+// import { connect } from 'react-redux';
+// import { logout } from '../actions/userActions';
 import Main from './Main';
 
 // React MDL
