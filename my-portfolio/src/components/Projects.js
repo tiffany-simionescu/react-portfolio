@@ -2,6 +2,8 @@ import React, { Component, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Route, Link } from 'react-router-dom';
 
+import ReactProjectCard from './project_cards/ReactProjectCard';
+
 import ReactProjectCardContainer from './containers/ReactProjectCardContainer';
 import ReduxProjectCardContainer from './containers/ReduxProjectCardContainer';
 import NodeProjectCardContainer from './containers/NodeProjectCardContainer';
@@ -21,7 +23,7 @@ class Projects extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      activeTab: 0
+      activeTab: 0,
     }
   }
 
@@ -29,17 +31,14 @@ class Projects extends Component {
     // React Projects
     if (this.state.activeTab === 0) {
 
-      // useEffect(() => {
-      //   this.props.fetchReactProjects(this.props.react_project_id);
-      // }, []);
-
       return (
         <div className="projects-grid">
-          {this.props.react_projects &&
-            this.props.react_projects.map((react_project, index) => (
+          {/* {this.props.react_projects &&
+            // this.props.react_projects.map((react_project, index) => (
               // <ReactProjectCard key={index} react_project={react_project} />
               <ReactProjectCardContainer react_project-id={index} react_project={react_project} />
-            ))}
+            ))} */}
+            <ReactProjectCardContainer />
           {/* <ReactProjectCardContainer react_project_id={this.props.react_project_id} /> */}
           <Link to="/projects/react" className="project-button">Add React Project</Link>
           <Route path="/projects/react" component={ReactProjectForm} />

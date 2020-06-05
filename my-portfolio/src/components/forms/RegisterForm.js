@@ -76,10 +76,17 @@ const RegisterForm = props => {
           onChange={handleChange}
         />
 
-        <button type="submit">Register</button>
+        <button>Register</button>
       </form>
     </div>
   );
 };
 
-export default connect(null, { registerUser })(RegisterForm);
+// export default connect(null, { registerUser })(RegisterForm);
+const mapStatetoProps = state => {
+  return {
+    loggedIn: state.isLoggedIn
+  };
+};
+
+export default connect(mapStatetoProps, { registerUser })(RegisterForm);

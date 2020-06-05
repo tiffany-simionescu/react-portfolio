@@ -48,10 +48,10 @@ const LoginForm = props => {
   );
 };
 
-const mapStatetoProps = state => {
-  return {
-    loggedIn: state.isLoggedIn
-  };
-}
+// const mapStatetoProps = state => {
+//   return {
+//     loggedIn: state.isLoggedIn
+//   };
+// }
 
-export default connect(mapStatetoProps, { login })(LoginForm);
+export default connect(null, { login })(LoginForm);

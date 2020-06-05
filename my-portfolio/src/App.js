@@ -1,52 +1,11 @@
 import React from 'react';
 import './App.css';
-import { Link } from 'react-router-dom';
+import Nav from './components/Nav';
 
-// Components
-import Main from './components/Main';
-
-// React MDL
-import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
-
-function App(props) {
+function App() {
   return (
     <div className="demo-big-content">
-      <Layout>
-          <Header className="header-color" title={<Link style={{ textDecoration: 'none', color: 'white' }}
-        to='/'>Tiffany Simionescu</Link>} scroll>
-              <Navigation>
-                  <Link to="/resume">Resume</Link>
-                  <Link to="/aboutme">About Me</Link>
-                  <Link to="/projects">Projects</Link>
-                  <Link to="/contact">Contact</Link>
-                  <Link to="/register">Register</Link>
-                  {localStorage.getItem('token') ? (
-                    <Link to="/" onClick={() => localStorage.removeItem('token')}>Logout</Link>
-                  ) : (
-                    <Link to="/login">Login</Link>
-                  )}
-              </Navigation>
-          </Header>
-          <Drawer className="drawer-link" title={<Link style={{ textDecoration: 'none', color: 'black' }}
-        to='/'>Tiffany Simionescu</Link>}>
-              <Navigation>
-                  <Link to="/resume">Resume</Link>
-                  <Link to="/aboutme">About Me</Link>
-                  <Link to="/projects">Projects</Link>
-                  <Link to="/contact">Contact</Link>
-                  <Link to="/register">Register</Link>
-                  {localStorage.getItem('token') ? (
-                    <Link to="/" onClick={() => localStorage.removeItem('token')}>Logout</Link>
-                  ) : (
-                    <Link to="/login">Login</Link>
-                  )}
-              </Navigation>
-          </Drawer>
-          <Content>
-              <div className="page-content" />
-              <Main />
-          </Content>
-      </Layout>
+      <Nav />
     </div>
   );
 }

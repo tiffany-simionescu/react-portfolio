@@ -13,22 +13,22 @@ function NodeProjectCard(props) {
   return (
     <div>
       <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
-            <CardTitle style={{ color: '#fff', height: '176px', background: `url(${props.node_project.node_project_image}) center / cover` }}>
-              {props.node_project.node_project_title}
+            <CardTitle style={{ color: '#fff', height: '176px', background: `url(${props.node_project_image}) center / cover` }}>
+              {props.node_project_title}
             </CardTitle>  
             <CardText>
-              {props.node_project.node_project_description}
+              {props.node_project_description}
             </CardText>
             <CardActions border>
               <Button 
                 colored
-                href={props.node_project.node_project_github_link} 
+                href={props.node_project_github_link} 
                 target="_blank">
                   Github
               </Button>
               <Button 
                 colored
-                href={props.node_project.node_project_live_link} 
+                href={props.node_project_live_link} 
                 target="_blank">
                   LiveDemo
               </Button>
