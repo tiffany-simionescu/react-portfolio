@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 import { Route, Link } from 'react-router-dom';
 
 import ReactProjectCardContainer from './containers/ReactProjectCardContainer';
@@ -56,7 +56,7 @@ class Projects extends Component {
             this.props.redux_projects.map((redux_project, index) => (
               <ReduxProjectCard key={index} redux_project={redux_project} />
             ))} */}
-          <ReduxProjectCardContainer redux_project_id={this.props.redux_project_id} />
+          <ReduxProjectCardContainer />
           <Link to="/projects/redux" className="project-button">Add Redux Project</Link>
           <Route path="/projects/redux" component={ReduxProjectForm} />
         </div>
@@ -75,7 +75,7 @@ class Projects extends Component {
             this.props.node_projects.map((node_project, index) => (
               <NodeProjectCard key={index} node_project={node_project} />
             ))} */}
-            <NodeProjectCardContainer node_project_id={this.props.node_project_id} />
+            <NodeProjectCardContainer />
             <Link to="/projects/node" className="project-button">Add Node Project</Link>
             <Route path="/projects/node" component={NodeProjectForm} />
         </div>
@@ -94,7 +94,7 @@ class Projects extends Component {
           this.props.sqlite_projects.map((sqlite_project, index) => (
             <SqliteProjectCard key={index} sqlite_project={sqlite_project} />
           ))} */}
-        <SqliteProjectCardContainer sqlite_project_id={this.props.sqlite_project_id} />
+        <SqliteProjectCardContainer />
         <Link to="/projects/sqlite" className="project-button">Add Sqlite Project</Link>
         <Route path="/projects/sqlite" component={SqliteProjectForm} />
       </div>
@@ -113,7 +113,7 @@ class Projects extends Component {
           this.props.postgresql_projects.map((postgresql_project, index) => (
             <PostgresqlProjectCard key={index} postgresql_project={postgresql_project} />
           ))} */}
-        <PostgresqlProjectCardContainer postgresql_project_id={this.props.postgresql_project_id} />
+        <PostgresqlProjectCardContainer />
         <Link to="/projects/postgresql" className="project-button">Add PostgreSQL Project</Link>
         <Route path="/projects/postgresql" component={PostgresqlProjectForm} />
       </div>
@@ -144,14 +144,16 @@ class Projects extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    react_project: state.redux_project,
-    redux_project: state.redux_project,
-    node_project: state.node_project,
-    sqlite_project: state.sqlite_project,
-    postgresql_project: state.postgresql_project
-  };
-};
+// const mapStateToProps = state => {
+//   return {
+//     react_project: state.redux_project,
+//     redux_project: state.redux_project,
+//     node_project: state.node_project,
+//     sqlite_project: state.sqlite_project,
+//     postgresql_project: state.postgresql_project
+//   };
+// };
 
-export default connect(mapStateToProps, {})(Projects);
+// export default connect(mapStateToProps, {})(Projects);
+
+export default Projects;

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 // import { fetchReduxProjects } from '../../actions/reduxProjectActions';
 import ReduxProjectCard from '../project_cards/ReduxProjectCard';
 import { axiosWithAuth } from '../../utils/axiosWithAuth';
+import '../../App.css';
 
 const ReduxProjectCardContainer = props => {
 
@@ -21,7 +22,7 @@ const ReduxProjectCardContainer = props => {
   }, []);
 
   return (
-    <div>
+    <div className="project-card-container">
       {/* {props.redux_projects &&
         props.redux_projects.map((redux_project, index) => {
           return (

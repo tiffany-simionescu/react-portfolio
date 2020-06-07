@@ -8,15 +8,16 @@ import {
   CardMenu,
   IconButton
 } from 'react-mdl';
+import '../../App.css';
 
 function ReduxProjectCard(props) {
   return (
-    <div>
+    <div className="project-card">
       <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
             <CardTitle style={{ color: '#fff', height: '176px', background: `url(${props.redux_project_image}) center / cover` }}>
               {props.redux_project_title}
             </CardTitle>  
-            <CardText>
+            <CardText className="project-card-description">
               {props.redux_project_description}
             </CardText>
             <CardActions border>

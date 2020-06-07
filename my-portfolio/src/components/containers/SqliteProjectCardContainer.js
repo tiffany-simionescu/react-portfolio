@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 // import { fetchSqliteProjects } from '../../actions/sqliteProjectActions';
 import SqliteProjectCard from '../project_cards/SqliteProjectCard';
 import { axiosWithAuth } from '../../utils/axiosWithAuth';
+import '../../App.css';
 
 const SqliteProjectCardContainer = props => {
 
@@ -21,7 +22,7 @@ const SqliteProjectCardContainer = props => {
   }, []);
 
   return (
-    <div>
+    <div className="project-card-container">
       {/* {props.sqlite_projects &&
         props.sqlite_projects.map((sqlite_project, index) => {
           return (

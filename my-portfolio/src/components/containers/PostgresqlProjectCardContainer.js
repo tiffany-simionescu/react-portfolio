@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 // import { fetchPostgresqlProjects } from '../../actions/postgresqlProjectActions';
 import PostgresqlProjectCard from '../project_cards/PostgresqlProjectCard';
 import { axiosWithAuth } from '../../utils/axiosWithAuth';
+import '../../App.css';
 
 const PostgresqlProjectCardContainer = props => {
 
@@ -21,7 +22,7 @@ const PostgresqlProjectCardContainer = props => {
   }, []);
 
   return (
-    <div>
+    <div className="project-card-container">
       {/* {props.postgresql_projects &&
         props.postgresql_projects.map((postgresql_project, index) => {
           return (
