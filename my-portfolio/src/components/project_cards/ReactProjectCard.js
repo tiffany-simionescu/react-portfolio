@@ -14,8 +14,10 @@ function ReactProjectCard(props) {
   return (
     <div className="project-card">
       <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
-            <CardTitle style={{ color: '#fff', height: '176px', background: `url(${props.react_project_image}) center / cover` }}>
-              {props.react_project_title}
+            <CardTitle style={{ height: '176px', background: `url(${props.react_project_image}) center / cover` }}>
+              <span className="project-title">
+                {props.react_project_title}
+              </span>
             </CardTitle>  
             <CardText className="project-card-description">
               {props.react_project_description}

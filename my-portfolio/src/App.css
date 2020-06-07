@@ -91,6 +91,17 @@
   /* justify-content: space-around; */
 }
 
+.project-title {
+  /* padding: 10px; */
+  margin-top: 120px;
+  margin-left: -8px;
+  color: rgb(64, 41, 66);
+  font-size: 22px;
+  padding: 7px;
+  border-radius: 1px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
 .project-button {
 	box-shadow: inset 0px 1px 0px 0px #efdcfb;
 	background: linear-gradient(to bottom, #4BC0C8 5%, #bc80ea 100%);

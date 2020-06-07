@@ -14,8 +14,10 @@ function ReduxProjectCard(props) {
   return (
     <div className="project-card">
       <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
-            <CardTitle style={{ color: '#fff', height: '176px', background: `url(${props.redux_project_image}) center / cover` }}>
-              {props.redux_project_title}
+            <CardTitle style={{ height: '176px', background: `url(${props.redux_project_image}) center / cover` }}>
+              <span className="project-title">
+                {props.redux_project_title}
+              </span>
             </CardTitle>  
             <CardText className="project-card-description">
               {props.redux_project_description}

@@ -15,7 +15,9 @@ function NodeProjectCard(props) {
     <div className="project-card">
       <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
             <CardTitle style={{ color: '#fff', height: '176px', background: `url(${props.node_project_image}) center / cover` }}>
-              {props.node_project_title}
+              <span className="project-title">
+                  {props.node_project_title}
+              </span>
             </CardTitle>  
             <CardText className="project-card-description">
               {props.node_project_description}
