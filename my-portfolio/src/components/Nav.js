@@ -1,8 +1,8 @@
 import React from 'react';
 import '../App.css';
 import { Link } from 'react-router-dom';
-// import { connect } from 'react-redux';
-// import { logout } from '../actions/userActions';
+import { connect } from 'react-redux';
+import { logout } from '../actions/userActions';
 import Main from './Main';
 
 // React MDL
@@ -24,7 +24,7 @@ function Nav(props) {
                     <Link to="/login" className="link">Login</Link>
                     :
                     <Link to="/login" className="link"
-                    onClick={() => localStorage.clear()}>Log Out</Link>
+                    onClick={() => props.logout()}>Log Out</Link>
                   }
                   {/* {props.loggedIn ? null : (
                     <Link to="/register">Register</Link>
@@ -48,7 +48,7 @@ function Nav(props) {
                     <Link to="/login" className="link">Login</Link>
                     :
                     <Link to="/login" className="link"
-                    onClick={() => localStorage.clear()}>Log Out</Link>
+                    onClick={() => props.logout()}>Log Out</Link>
                   }
                   {/* {props.loggedIn ? null : (
                     <Link to="/register">Register</Link>
@@ -69,12 +69,12 @@ function Nav(props) {
   )
 };
 
-// const mapStateToProps = state => {
-//   return {
-//     loggedIn: state.isLoggedIn
-//   }
-// }
+const mapStateToProps = state => {
+  return {
+    loggedIn: state.isLoggedIn
+  }
+}
 
-// export default connect(mapStateToProps, { logout })(Nav);
+export default connect(mapStateToProps, { logout })(Nav);
 
-export default Nav;
+// export default Nav;

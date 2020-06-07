@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { login } from '../../actions/userActions';
 
@@ -23,35 +24,44 @@ const LoginForm = props => {
   };
 
   return (
-    <div>
+    <div className="login-box">
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
-        <label>Username</label>
-        <input 
-          type="text"
-          name="username"
-          placeholder="Username"
-          value={user.username}
-          onChange={handleChange}
-        />
-        <label>Password</label>
-        <input 
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={user.password}
-          onChange={handleChange} 
-        />
-        <button type="submit">Login</button>
+        <div className="user-box">
+          <input 
+            type="text"
+            name="username"
+            placeholder="Username"
+            value={user.username}
+            onChange={handleChange}
+          />
+          <label>Username</label>
+        </div>
+        <div className="user-box">
+          <input 
+            type="password"
+            name="password"
+            placeholder="Password"
+            value={user.password}
+            onChange={handleChange} 
+          />
+          <label>Password</label>
+        </div>
+        <button type="submit" className="project-button">Login</button>
       </form>
+      
+      <p className="no-account">No Account?
+        <Link to="/register" className="no-account-link"> Create One</Link>
+      </p>
     </div>
   );
 };
 
-// const mapStatetoProps = state => {
-//   return {
-//     loggedIn: state.isLoggedIn
-//   };
-// }
+const mapStatetoProps = state => {
+  return {
+    loggedIn: state.isLoggedIn
+  };
+}
 
-export default connect(null, { login })(LoginForm);
+export default connect(mapStatetoProps, { login })(LoginForm);
+// export default LoginForm;

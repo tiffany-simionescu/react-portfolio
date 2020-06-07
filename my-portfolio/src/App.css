@@ -68,8 +68,58 @@
   padding: 8px;
 }
 
-.projects-grid {
+/* .projects-grid {
   display: flex;
+} */
+
+/* Projects */
+
+.project-card {
+  margin: 30px 20px 0 0;
+}
+
+.project-card-description {
+  min-height: 90px;
+}
+
+.project-card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* justify-content: flex-start; */
+  /* justify-content: space-around; */
+}
+
+.project-button {
+	box-shadow: inset 0px 1px 0px 0px #efdcfb;
+	background: linear-gradient(to bottom, #4BC0C8 5%, #bc80ea 100%);
+	background-color:#dfbdfa;
+	border-radius: 6px;
+	border: 1px solid #c584f3;
+	display: inline-block;
+	cursor: pointer;
+	color:#ffffff;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 10px 24px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #9752cc;
+}
+.project-button:hover {
+	background:linear-gradient(to bottom, #bc80ea 5%, #FEAC5E 100%);
+	background-color:#bc80ea;
+}
+.project-button:active {
+	position:relative;
+	top:1px;
+}
+
+.project-button {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+  width: 250px;
 }
 
 /* Contact Page */
@@ -137,4 +187,109 @@
 
 .resume-right-col hr {
   border-top: 3px solid #FEAC5E;
+}
+
+/* Login */
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(61, 45, 61, 0.6);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+.login-box h1 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.user-box {
+  position: relative;
+}
+
+.user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.user-box input:focus ~ label {
+  /* top: -25px; */
+  left: 0;
+  color: #03e9f4;
+  font-size: 16px;
+}
+
+.user-box input:not(:placeholder-shown) ~ label {
+  transform: translate(10%, -75%) scale(.9);
+  /* opacity: .25; */
+  color: #03e9f4;
+}
+
+.no-account,
+.have-account {
+  color: #fff;
+  font-size: 16px;
+}
+
+.no-account-link,
+.have-account-link {
+  text-decoration: none;
+  font-size: 16px;
+  color: #03e9f4;
+}
+
+.no-account-link:hover,
+.have-account-link:hover {
+  color: rgb(250, 193, 140);
+}
+
+/* Register */
+
+.register-box {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 500px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(61, 45, 61, 0.6);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+.register-box h1 {
+  margin: 10px 0 20px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.register-box button {
+  margin-top: 0;
 }
