@@ -1,5 +1,6 @@
 import React, { useState } from'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { addSqliteProject } from '../../actions/sqliteProjectActions';
 
 // Update style later
@@ -70,7 +71,10 @@ const SqliteProjectForm = props => {
           <button type="submit">Add SQLite Project</button>
         </form>
         ) : (
-          <h4>Only the Admin can add a new SQLite Project.</h4>
+          <div>
+            <h4>Only the Admin can add a new SQLite Project.</h4>
+            <Link to="/projects">Return to Projects</Link>
+          </div>
         )}
     </div>
     )};

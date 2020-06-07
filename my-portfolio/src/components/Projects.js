@@ -8,12 +8,6 @@ import NodeProjectCardContainer from './containers/NodeProjectCardContainer';
 import SqliteProjectCardContainer from './containers/SqliteProjectCardContainer';
 import PostgresqlProjectCardContainer from './containers/PostgresqlProjectCardContainer';
 
-import ReactProjectForm from './forms/ReactProjectForm';
-import ReduxProjectForm from './forms/ReduxProjectForm';
-import NodeProjectForm from './forms/NodeProjectForm';
-import SqliteProjectForm from './forms/SqliteProjectForm';
-import PostgresqlProjectForm from './forms/PostgresqlProjectForm';
-
 // React Mdl 
 import { Tabs, Tab, Grid, Cell } from 'react-mdl';
 
@@ -38,8 +32,7 @@ class Projects extends Component {
             ))} */}
             <ReactProjectCardContainer />
           {/* <ReactProjectCardContainer react_project_id={this.props.react_project_id} /> */}
-          <Link to="/projects/react" className="project-button">Add React Project</Link>
-          <Route path="/projects/react" component={ReactProjectForm} />
+          <Link to="/addreact" className="project-button">Add React Project</Link>
         </div>
       )
 
@@ -57,8 +50,7 @@ class Projects extends Component {
               <ReduxProjectCard key={index} redux_project={redux_project} />
             ))} */}
           <ReduxProjectCardContainer />
-          <Link to="/projects/redux" className="project-button">Add Redux Project</Link>
-          <Route path="/projects/redux" component={ReduxProjectForm} />
+          <Link to="/addredux" className="project-button">Add Redux Project</Link>
         </div>
       )
 
@@ -76,8 +68,7 @@ class Projects extends Component {
               <NodeProjectCard key={index} node_project={node_project} />
             ))} */}
             <NodeProjectCardContainer />
-            <Link to="/projects/node" className="project-button">Add Node Project</Link>
-            <Route path="/projects/node" component={NodeProjectForm} />
+            <Link to="/addnode" className="project-button">Add Node Project</Link>
         </div>
       )
 
@@ -95,8 +86,7 @@ class Projects extends Component {
             <SqliteProjectCard key={index} sqlite_project={sqlite_project} />
           ))} */}
         <SqliteProjectCardContainer />
-        <Link to="/projects/sqlite" className="project-button">Add Sqlite Project</Link>
-        <Route path="/projects/sqlite" component={SqliteProjectForm} />
+        <Link to="/addsqlite" className="project-button">Add Sqlite Project</Link>
       </div>
     )
 
@@ -114,8 +104,7 @@ class Projects extends Component {
             <PostgresqlProjectCard key={index} postgresql_project={postgresql_project} />
           ))} */}
         <PostgresqlProjectCardContainer />
-        <Link to="/projects/postgresql" className="project-button">Add PostgreSQL Project</Link>
-        <Route path="/projects/postgresql" component={PostgresqlProjectForm} />
+        <Link to="/addpostgresql" className="project-button">Add PostgreSQL Project</Link>
       </div>
     )
     }

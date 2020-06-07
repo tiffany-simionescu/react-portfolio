@@ -1,5 +1,6 @@
 import React, { useState } from'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { addReduxProject } from '../../actions/reduxProjectActions';
 
 // Update style later
@@ -70,7 +71,10 @@ const ReduxProjectForm = props => {
           <button type="submit">Add Redux Project</button>
         </form>
         ) : (
-          <h4>Only the Admin can add a new Redux Project.</h4>
+          <div>
+            <h4>Only the Admin can add a new Redux Project.</h4>
+            <Link to="/projects">Return to Projects</Link>
+          </div>
         )}
     </div>
     )};

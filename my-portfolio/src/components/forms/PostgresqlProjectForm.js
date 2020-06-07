@@ -1,5 +1,6 @@
 import React, { useState } from'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { addPostgresqlProject } from '../../actions/postgresqlProjectActions';
 
 // Update style later
@@ -70,7 +71,10 @@ const PostgresqlProjectForm = props => {
           <button type="submit">Add PostgreSQL Project</button>
         </form>
         ) : (
-          <h4>Only the Admin can add a new PostgreSQL Project.</h4>
+          <div>
+            <h4>Only the Admin can add a new PostgreSQL Project.</h4>
+            <Link to="/projects">Return to Projects</Link>
+          </div>
         )}
     </div>
     )};

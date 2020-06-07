@@ -22,11 +22,11 @@ const Main = () => (
     <Route path="/resume" component={Resume} />
     <Route path="/login" component={LoginForm} />
     <Route path="/register" component={RegisterForm} />
-    <Route path="/projects/react" component={ReactProjectForm} />
-    <Route path="/projects/redux" component={ReduxProjectForm} />
-    <Route path="/projects/node" component={NodeProjectForm} />
-    <Route path="/projects/sqlite" component={SqliteProjectForm} />
-    <Route path="/projects/postgresql" component={PostgresqlProjectForm} />
+    <Route path="/addreact" component={ReactProjectForm} />
+    <Route path="/addredux" component={ReduxProjectForm} />
+    <Route path="/addnode" component={NodeProjectForm} />
+    <Route path="/addsqlite" component={SqliteProjectForm} />
+    <Route path="/addpostgresql" component={PostgresqlProjectForm} />
   </Switch>
 )
 

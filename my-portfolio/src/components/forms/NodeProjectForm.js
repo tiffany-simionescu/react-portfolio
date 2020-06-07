@@ -1,5 +1,6 @@
 import React, { useState } from'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { addNodeProject } from '../../actions/nodeProjectActions';
 
 // Update style later
@@ -70,7 +71,10 @@ const NodeProjectForm = props => {
           <button type="submit">Add Node Project</button>
         </form>
         ) : (
-          <h4>Only the Admin can add a new Node Project.</h4>
+          <div>
+            <h4>Only the Admin can add a new Node Project.</h4>
+            <Link to="/projects">Return to Projects</Link>
+          </div>
         )}
     </div>
     )};
