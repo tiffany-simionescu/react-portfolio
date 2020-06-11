@@ -69,6 +69,7 @@ const ReactProjectForm = props => {
             onChange={handleChange}
           />
           <button type="submit">Add React Project</button>
+          <Link to="/projects">Cancel</Link>
         </form>
         ) : (
           <div>

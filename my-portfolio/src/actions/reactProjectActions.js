@@ -122,7 +122,7 @@ export const editReactProject = (react_project_id, react_project) => dispatch =>
     });
 };
 
-export const deleteReactProject = (react_project_id, user_id, props) => dispatch => {
+export const deleteReactProject = (react_project_id, props) => dispatch => {
   dispatch({ type: DELETE_INITIALIZE });
 
   axiosWithAuth()
@@ -131,8 +131,8 @@ export const deleteReactProject = (react_project_id, user_id, props) => dispatch
       dispatch({
         type: DELETE_REACT_PROJECT_SUCCESS
       });
-      fetchReactProjects(user_id);
-      props.history.push('/api/reactprojects');
+      fetchReactProjects();
+      props.history.push('/api/projects');
     })
     .catch(err => {
       dispatch({

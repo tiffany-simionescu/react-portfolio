@@ -69,6 +69,7 @@ const PostgresqlProjectForm = props => {
             onChange={handleChange}
           />
           <button type="submit">Add PostgreSQL Project</button>
+          <Link to="/projects">Cancel</Link>
         </form>
         ) : (
           <div>

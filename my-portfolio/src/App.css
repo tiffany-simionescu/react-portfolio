@@ -78,6 +78,11 @@
   margin: 30px 20px 0 0;
 }
 
+.project-card:hover {
+  transition: all .2s ease-in-out;
+  transform: scale(1.05);
+}
+
 .project-card-description {
   min-height: 90px;
 }
@@ -94,13 +99,21 @@
 .project-title {
   /* padding: 10px; */
   margin-top: 120px;
-  margin-left: -8px;
+  /* margin-left: -8px; */
+  width: 330px;
   color: rgb(64, 41, 66);
   font-size: 22px;
   padding: 7px;
-  border-radius: 1px;
+  /* border-radius: 1px; */
   background-color: rgba(255, 255, 255, 0.7);
+  background: -webkit-linear-gradient(to left, rgba(255, 255, 255, 0.8), rgba(0, 209, 199, 0.7)); 
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.8), rgba(0, 209, 199, 0.7)); 
 }
+
+/* .project-card:hover .project-title {
+  background: -webkit-linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(254, 171, 93, 0.7)); 
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(254, 171, 93, 0.7));
+} */
 
 .project-button {
 	box-shadow: inset 0px 1px 0px 0px #efdcfb;
@@ -131,6 +144,37 @@
   justify-content: center;
   margin: 50px auto;
   width: 250px;
+}
+
+.delete-link {
+	box-shadow: inset 0px 1px 0px 0px #efdcfb;
+	background: linear-gradient(to bottom, #4BC0C8 5%, #bc80ea 100%);
+	background-color:#dfbdfa;
+	border-radius: 6px;
+	border: 1px solid #c584f3;
+	display: inline-block;
+	cursor: pointer;
+	color:#ffffff;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 5px 15px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #9752cc;
+}
+.delete-link:hover {
+	background:linear-gradient(to bottom, #bc80ea 5%, #FEAC5E 100%);
+	background-color:#bc80ea;
+}
+.delete-link:active {
+	position:relative;
+	top:1px;
+}
+
+.delete-link {
+  display: flex;
+  justify-content: flex-end;
+  margin: auto;
+  width: 50px;
 }
 
 /* Contact Page */
@@ -201,7 +245,8 @@
 }
 
 /* Login */
-.login-box {
+.login-box,
+.project-box {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -214,18 +259,26 @@
   border-radius: 10px;
 }
 
-.login-box h1 {
+.project-box {
+  /* height: 400px; */
+  width: 400px;
+}
+
+.login-box h1,
+.project-box h1 {
   margin: 0 0 30px;
   padding: 0;
   color: #fff;
   text-align: center;
 }
 
-.user-box {
+.user-box,
+.project-box {
   position: relative;
 }
 
-.user-box input {
+.user-box input,
+.project-label input {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -237,7 +290,13 @@
   background: transparent;
 }
 
-.user-box label {
+.project-label input {
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+.user-box label,
+.project-label label {
   position: absolute;
   top:0;
   left: 0;
@@ -248,7 +307,8 @@
   transition: .5s;
 }
 
-.user-box input:focus ~ label {
+.user-box input:focus ~ label,
+.project-label input:focus ~ label {
   /* top: -25px; */
   left: 0;
   color: #03e9f4;
@@ -257,6 +317,12 @@
 
 .user-box input:not(:placeholder-shown) ~ label {
   transform: translate(10%, -75%) scale(.9);
+  /* opacity: .25; */
+  color: #03e9f4;
+}
+
+.project-label input:not(:placeholder-shown) ~ label {
+  transform: translate(10%, -10%) scale(.9);
   /* opacity: .25; */
   color: #03e9f4;
 }

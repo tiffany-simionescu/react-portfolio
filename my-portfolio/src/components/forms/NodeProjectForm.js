@@ -69,6 +69,7 @@ const NodeProjectForm = props => {
             onChange={handleChange}
           />
           <button type="submit">Add Node Project</button>
+          <Link to="/projects">Cancel</Link>
         </form>
         ) : (
           <div>

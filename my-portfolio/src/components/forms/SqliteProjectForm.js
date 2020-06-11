@@ -26,7 +26,7 @@ const SqliteProjectForm = props => {
   return (
     <div>
       <h2>New SQLite Project</h2>
-        {props.loggedIn ? (
+        {localStorage.getItem('token') ? (
           <form onSubmit={handleSubmit}>
           <label>Image URL</label>
           <input 
@@ -69,6 +69,7 @@ const SqliteProjectForm = props => {
             onChange={handleChange}
           />
           <button type="submit">Add SQLite Project</button>
+          <Link to="/projects">Cancel</Link>
         </form>
         ) : (
           <div>
@@ -81,7 +82,7 @@ const SqliteProjectForm = props => {
 
     const mapStateToProps = state => {
       return {
-        loggedIn: state.isLoggedIn,
+        // loggedIn: state.isLoggedIn,
         sqlite_project_id: state.sqlite_project_id
       };
     };

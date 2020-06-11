@@ -69,6 +69,7 @@ const ReduxProjectForm = props => {
             onChange={handleChange}
           />
           <button type="submit">Add Redux Project</button>
+          <Link to="/projects">Cancel</Link>
         </form>
         ) : (
           <div>
