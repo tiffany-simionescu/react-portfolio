@@ -12,10 +12,10 @@
 /* Landing Page */
 
 .landing-grid {
-  background: #FEAC5E;
-  background: -webkit-linear-gradient(to left, #4BC0C8, #C779D0, #FEAC5E); 
-  background: linear-gradient(to left, #4BC0C8, #C779D0, #FEAC5E);
-  /*  */
+  background: 
+  linear-gradient(to left, rgba(75, 192, 200, 0.3), rgba(199, 121, 208, 0.3), rgba(254, 172, 94, 0.3)),
+  url('https://images.pexels.com/photos/2930707/pexels-photo-2930707.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  /* background-position: 0 -150px; */
   text-align: center;
   position: fixed;
   top: 0;
@@ -229,7 +229,10 @@
 /* Resume Page */
 
 .resume-right-col {
-  background: #27211F;
+  background: 
+  linear-gradient(rgba(39, 33, 31, 0.8), rgba(39, 33, 31, 0.8)),
+  url('https://images.pexels.com/photos/3889928/pexels-photo-3889928.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=950&w=1240');
+  /* background: rgba(39, 33, 31, 0.3); */
   color: white;
   padding: 2em;
   border-radius: 30px;
@@ -242,6 +245,11 @@
 
 .resume-right-col hr {
   border-top: 3px solid #FEAC5E;
+}
+
+.resume-button {
+  margin: 0;
+  width: 150px;
 }
 
 /* Login */
@@ -273,12 +281,14 @@
 }
 
 .user-box,
-.project-box {
+.project-box,
+.project-form-box {
   position: relative;
 }
 
 .user-box input,
-.project-label input {
+.project-label input,
+.project-form-box input {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -290,13 +300,15 @@
   background: transparent;
 }
 
-.project-label input {
+.project-label input,
+.project-form-box input {
   font-size: 14px;
   padding: 5px 0;
 }
 
 .user-box label,
-.project-label label {
+.project-label label,
+.project-form-box label {
   position: absolute;
   top:0;
   left: 0;
@@ -308,14 +320,17 @@
 }
 
 .user-box input:focus ~ label,
-.project-label input:focus ~ label {
+.project-label input:focus ~ label,
+.project-form-box:focus ~ label {
   /* top: -25px; */
   left: 0;
   color: #03e9f4;
   font-size: 16px;
 }
 
-.user-box input:not(:placeholder-shown) ~ label {
+.user-box input:not(:placeholder-shown) ~ label,
+.project-label input:not(:placeholder-shown) ~ label,
+.project-form-box input:not(:placeholder-shown) ~ label {
   transform: translate(10%, -75%) scale(.9);
   /* opacity: .25; */
   color: #03e9f4;
@@ -369,4 +384,43 @@
 
 .register-box button {
   margin-top: 0;
+}
+
+/* Project Forms */
+.project-form {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.project-right-col {
+  /* margin: 0 20px; */
+  /* position: relative; */
+  top: 60%;
+  left: 50%;
+  width: 500px;
+  height: 550px;
+  padding: 20px;
+  /* padding-bottom: 0; */
+  /* transform: translate(-50%, -50%); */
+  background: rgba(61, 45, 61, 0.6);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 0 10px 10px 0;
+}
+
+.project-right-col h2 {
+  margin: 20px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.project-form-button {
+  display: flex;
+}
+
+.cancel-button {
+  width: 100px;
+  margin-left: 10px;
 }

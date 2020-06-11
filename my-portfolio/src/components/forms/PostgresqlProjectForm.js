@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { addPostgresqlProject } from '../../actions/postgresqlProjectActions';
 
-// Update style later
-
 const PostgresqlProjectForm = props => {
   const [postgresql_project, setPostgresqlProject] = useState({
     postgresql_project_image: "",
@@ -24,65 +22,90 @@ const PostgresqlProjectForm = props => {
   };
 
   return (
-    <div>
-      <h2>New PostgreSQL Project</h2>
+    <div className="project-form">
+      <div className="project-left-col">
+        <img 
+          src="https://images.pexels.com/photos/709552/pexels-photo-709552.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350&w=340"
+          alt="lake and trees"
+          style={{ borderRadius: "10px 0 0 10px", height: "550px", width: "500px", boxShadow: "0 15px 25px rgba(0,0,0,.6)" }}
+        />
+      </div>
+      <div className="project-right-col">
+        <h2>New PostgreSQL Project</h2>
         {localStorage.getItem('token') ? (
           <form onSubmit={handleSubmit}>
-          <label>Image URL</label>
-          <input 
-            type="text"
-            name="postgresql_project_image"
-            placeholder="Image URL"
-            value={postgresql_project.postgresql_project_image}
-            onChange={handleChange}
-          />
-          <label>Title</label>
-          <input 
-            type="text"
-            name="postgresql_project_title"
-            placeholder="Project Title"
-            value={postgresql_project.postgresql_project_title}
-            onChange={handleChange}
-          />
-          <label>Description</label>
-          <input 
-            type="text"
-            name="postgresql_project_description"
-            placeholder="Project Description"
-            value={postgresql_project.postgresql_project_description}
-            onChange={handleChange}
-          />
-          <label>Github Link</label>
-          <input 
-            type="text"
-            name="postgresql_project_github_link"
-            placeholder="Github Link"
-            value={postgresql_project.postgresql_project_github_link}
-            onChange={handleChange}
-          />
-          <label>Live Link</label>
-          <input 
-            type="text"
-            name="postgresql_project_live_link"
-            placeholder="Live Link"
-            value={postgresql_project.postgresql_project_live_link}
-            onChange={handleChange}
-          />
-          <button type="submit">Add PostgreSQL Project</button>
-          <Link to="/projects">Cancel</Link>
+
+            <div className="project-form-box">
+              <input 
+              type="text"
+              name="postgresql_project_image"
+              placeholder="Image URL"
+              value={postgresql_project.postgresql_project_image}
+              onChange={handleChange}
+              />
+              <label>Image URL</label>
+            </div>
+
+            <div className="project-form-box">
+              <input 
+              type="text"
+              name="postgresql_project_title"
+              placeholder="Project Title"
+              value={postgresql_project.postgresql_project_title}
+              onChange={handleChange}
+              />
+              <label>Title</label>
+            </div>
+
+            <div className="project-form-box">
+              <input 
+              type="text"
+              name="postgresql_project_description"
+              placeholder="Project Description"
+              value={postgresql_project.postgresql_project_description}
+              onChange={handleChange}
+              />
+              <label>Description</label>
+            </div>
+
+            <div className="project-form-box">
+              <input 
+              type="text"
+              name="postgresql_project_github_link"
+              placeholder="Github Link"
+              value={postgresql_project.postgresql_project_github_link}
+              onChange={handleChange}
+              />
+              <label>Github Link</label>
+            </div>
+
+            <div className="project-form-box">
+              <input 
+              type="text"
+              name="postgresql_project_live_link"
+              placeholder="Live Link"
+              value={postgresql_project.postgresql_project_live_link}
+              onChange={handleChange}
+              />
+              <label>Live Link</label>
+            </div>
+          <div className="project-form-button">
+            <button type="submit" className="project-button">Add PostgreSQL Project</button>
+            <Link to="/projects" className="project-button cancel-button">Cancel</Link>
+          </div>
         </form>
         ) : (
           <div>
             <h4>Only the Admin can add a new PostgreSQL Project.</h4>
-            <Link to="/projects">Return to Projects</Link>
+            <Link to="/projects" className="project-button">Return to Projects</Link>
           </div>
-        )}
+        )} 
+        </div>
     </div>
     )};
 
     const mapStateToProps = state => {
       return {
-        // loggedIn: state.isLoggedIn,
         postgresql_project_id: state.postgresql_project_id
       };
     };
