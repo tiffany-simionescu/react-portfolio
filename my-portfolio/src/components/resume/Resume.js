@@ -3,6 +3,7 @@ import Avatar from '../../images/avatar.jpg';
 import Education from './Education';
 import Experience from './Experience';
 import Skills from './Skills';
+import { Link } from 'react-router-dom';
 
 // React Mdl
 import { Grid, Cell } from 'react-mdl';
@@ -23,7 +24,7 @@ class Resume extends Component {
               />
             </div>
 
-            <h2 style={{ paddingTop: '2em' }}>
+            <h2 style={{ paddingTop: '1em' }}>
               Tiffany Simionescu
             </h2>
             <h4 style={{ color: 'grey'}}>
@@ -41,9 +42,13 @@ class Resume extends Component {
             <h5>Phone</h5>
             <p>(864) 283-5263</p>
             <h5>Email</h5>
-            <p>tsimionescu@gmail.com</p>
+            <p>tiffany.simionescu@gmail.com</p>
             <h5>Web</h5>
-            <p>tiffanysimionescu.com</p>
+            <Link 
+              to="/" 
+              className="project-button resume-button">
+                tiffanysimionescu.com
+            </Link>
             <hr />
           </Cell>
 
