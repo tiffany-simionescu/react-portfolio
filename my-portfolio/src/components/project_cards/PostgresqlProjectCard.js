@@ -113,7 +113,7 @@ function PostgresqlProjectCard(props) {
             </form>
           </div>
         ) : (
-          <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
+          <Card shadow={5} style={{ minWidth: '450', margin: 'auto', borderRadius: '10px' }}>
             <CardTitle style={{ height: '176px', background: `url(${props.postgresql_project_image}) center / cover` }}>
                 <span className="project-title">
                   {props.postgresql_project_title}

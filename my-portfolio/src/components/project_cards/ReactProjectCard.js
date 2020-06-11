@@ -113,7 +113,7 @@ function ReactProjectCard(props) {
             </form>
           </div>
         ) : (
-          <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
+          <Card shadow={5} style={{ minWidth: '450', margin: 'auto', borderRadius: '10px' }}>
             <CardTitle style={{ height: '176px', background: `url(${props.react_project_image}) center / cover` }}>
                 <span className="project-title">
                   {props.react_project_title}
