@@ -25,7 +25,7 @@ const SqliteProjectForm = props => {
     <div className="project-form">
       <div className="project-left-col">
         <img 
-          src="https://images.pexels.com/photos/709552/pexels-photo-709552.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350&w=340"
+          src="https://images.pexels.com/photos/158489/yellowstone-national-park-sunset-twilight-dusk-158489.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
           alt="lake and trees"
           style={{ borderRadius: "10px 0 0 10px", height: "550px", width: "500px", boxShadow: "0 15px 25px rgba(0,0,0,.6)" }}
         />

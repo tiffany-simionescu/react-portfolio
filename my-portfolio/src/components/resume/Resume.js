@@ -16,15 +16,15 @@ class Resume extends Component {
 
           {/* Left Side */}
           <Cell className="resume-left-col" col={4}>
-            <div style={{ textAlign: 'center' }}>
+            {/* <div style={{ textAlign: 'center' }}>
               <img 
                 src={Avatar}
                 alt="avatar"
                 style={{ height: '200px', borderRadius: '50%' }}
               />
-            </div>
+            </div> */}
 
-            <h2 style={{ paddingTop: '1em' }}>
+            <h2 style={{ paddingTop: '0.5em' }}>
               Tiffany Simionescu
             </h2>
             <h4 style={{ color: 'grey'}}>

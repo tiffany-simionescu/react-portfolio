@@ -20,12 +20,12 @@ function Nav(props) {
                   <Link to="/projects">Projects</Link>
                   <Link to="/contact">Contact</Link>
                   <Link to="/register">Register</Link>
-                  {!localStorage.getItem('token') ? 
+                  {!localStorage.getItem('token') ? (
                     <Link to="/login" className="link">Login</Link>
-                    :
+                   ) : (
                     <Link to="/login" className="link"
                     onClick={() => props.logout()}>Log Out</Link>
-                  }
+                   )}
                   {/* {props.loggedIn ? null : (
                     <Link to="/register">Register</Link>
                   )}
