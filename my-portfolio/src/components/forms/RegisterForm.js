@@ -25,6 +25,7 @@ const RegisterForm = props => {
   };
 
   return (
+    <div className="register-box-background">
     <div className="register-box">
       <h1>Register</h1>
       <form onSubmit={handleSubmit}>
@@ -101,6 +102,7 @@ const RegisterForm = props => {
       <p className="have-account">Have an Account?
         <Link to="/login" className="have-account-link"> Login</Link>
       </p>
+    </div>
     </div>
   );
 };

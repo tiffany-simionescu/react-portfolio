@@ -24,35 +24,37 @@ const LoginForm = props => {
   };
 
   return (
-    <div className="login-box">
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="user-box">
-          <input 
-            type="text"
-            name="username"
-            placeholder="Username"
-            value={user.username}
-            onChange={handleChange}
-          />
-          <label>Username</label>
-        </div>
-        <div className="user-box">
-          <input 
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={user.password}
-            onChange={handleChange} 
-          />
-          <label>Password</label>
-        </div>
-        <button type="submit" className="project-button">Login</button>
-      </form>
-      
-      <p className="no-account">No Account?
-        <Link to="/register" className="no-account-link"> Create One</Link>
-      </p>
+    <div className="login-box-background">
+      <div className="login-box">
+        <h1>Login</h1>
+        <form onSubmit={handleSubmit}>
+          <div className="user-box">
+            <input 
+              type="text"
+              name="username"
+              placeholder="Username"
+              value={user.username}
+              onChange={handleChange}
+            />
+            <label>Username</label>
+          </div>
+          <div className="user-box">
+            <input 
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={user.password}
+              onChange={handleChange} 
+            />
+            <label>Password</label>
+          </div>
+          <button type="submit" className="project-button">Login</button>
+        </form>
+        
+        <p className="no-account">No Account?
+          <Link to="/register" className="no-account-link"> Create One</Link>
+        </p>
+      </div>
     </div>
   );
 };

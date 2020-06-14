@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import * as emailjs from 'emailjs-com';
 
 // React Mdl
-import { Grid, Cell, List, ListItem, ListItemContent, Button } from 'react-mdl';
+import { Grid, Cell, List, ListItem, ListItemContent } from 'react-mdl';
 
 class ContactForm extends Component {
   constructor(props) {
@@ -19,8 +19,10 @@ class ContactForm extends Component {
     emailjs.send('gmail','template_dWaijdid', this.state, 'user_IlZyzJhy7n0poMp73csQD')
     .then(res => {
        console.log('SUCCESS!', res.status, res.text);
+       alert("Email sent successfully!")
     }, (err) => {
        console.error('FAILED...', err);
+       alert("Failed to send. Please try again.")
     });
     this.resetForm();
   }
@@ -42,19 +44,21 @@ class ContactForm extends Component {
   render() {
     return (
       <div className="contact-body">
+        <h2>Contact Me</h2>
+        {/* <hr /> */}
         <Grid className="contact-grid">
-          <Cell col={6}>
-            <h2>Contact Me</h2>
-            <hr />
-            <p style={{ width: '75%', margin: '20px auto', paddingTop: '1em' }}>
+          <Cell col={6} style={{ width: "500px", marginRight: "30px"}}>
+            {/* <h2>Contact Me</h2> */}
+            {/* <hr /> */}
+            <p style={{ width: '90%', margin: '20px auto', paddingTop: '1em' }}>
               If you have any questions or comments, please fill out the form below.
               I would love to hear from you. Thank you, and have a wonderful day!
             </p>
 
             <div className="email-form">
-            <Form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit}>
                 <div>
-                  <label>Name:</label>
+                  {/* <label>Name:</label> */}
                   <input
                     type="text"
                     name="name"
@@ -65,7 +69,7 @@ class ContactForm extends Component {
                   />
                 </div>
                 <div>
-                  <label>Email:</label>
+                  {/* <label>Email:</label> */}
                   <input
                     type="email"
                     name="email"
@@ -76,54 +80,72 @@ class ContactForm extends Component {
                   />
                 </div>
                 <div>
-                  <label>Message:</label>
-                  <input
-                    type="textarea"
+                  {/* <label>Message:</label> */}
+                  <textarea 
+                    rows="5"
+                    cols="40"
                     name="message"
                     onChange={this.handleChange.bind(this, 'message')}
-                    placeholder="Message"
+                    placeholder="Message..."
                     required
-                    value={this.state.message}  
+                    value={this.state.message}
                   />
                 </div>
-                <Button variant="primary" type="submit">
+                <button variant="primary" type="submit">
                   Send
-                </Button>
-              </Form>
+                </button>
+              </form>
             </div>
 
           </Cell>
-          <Cell col={6}>
-            <h2>Tiffany Simionescu</h2>
-            <hr />
+           <Cell col={6}>
+            {/* <h2>Tiffany Simionescu</h2> */}
+            {/* <hr /> */}
 
             <div className="contact-list">
               <List>
                 <ListItem>
-                  <ListItemContent style={{ fontSize: '30px', fontFamily: 'Anton' }}>
-                    <i className="fa fa-phone-square" aria-hidden="true" />
+                  <ListItemContent style={{ fontSize: '16px', verticalAlign: "middle" }}>
+                    <i className="fa fa-phone-square" aria-hidden="true" style={{ fontSize: "40px" }} />
                     (854) 283-5263
                   </ListItemContent>
                 </ListItem>
 
                 <ListItem>
-                  <ListItemContent style={{ fontSize: '30px', fontFamily: 'Anton' }}>
-                    <i className="fa fa-fax" aria-hidden="true" />
-                    (854) 283-5263
+                  <ListItemContent style={{ fontSize: '16px' }}>
+                    <i className="fa fa-envelope" aria-hidden="true" style={{ fontSize: "40px" }} />
+                    tiffany.simionescu@gmail.com
                   </ListItemContent>
                 </ListItem>
 
                 <ListItem>
-                  <ListItemContent style={{ fontSize: '30px', fontFamily: 'Anton' }}>
-                    <i className="fa fa-envelope" aria-hidden="true" />
-                    tsimionescu@gmail.com
+                  <ListItemContent style={{ fontSize: '16px' }}>
+                    <i className="fa fa-linkedin-square" aria-hidden="true" style={{ fontSize: "40px" }} />
+                    /in/tiffanysimionescu/
                   </ListItemContent>
                 </ListItem>
 
                 <ListItem>
-                  <ListItemContent style={{ fontSize: '30px', fontFamily: 'Anton' }}>
-                    <i className="fa fa-skype" aria-hidden="true" />
-                    My-Skype-Id
+                  <ListItemContent style={{ fontSize: '16px' }}>
+                    <i className="fa fa-github-square" aria-hidden="true" style={{ fontSize: "40px" }} />
+                    tiffany-simionescu
+                  </ListItemContent>
+                </ListItem>
+
+                <ListItem>
+                  <ListItemContent style={{ fontSize: '16px' }}>
+                    <i className="fa fa-facebook-square" aria-hidden="true" style={{ fontSize: "40px" }} />
+                    <a href="https://www.facebook.com/Tiffany-Simionescu-Full-Stack-Web-Developer-337217927229001"
+                      target="_blank">
+                      Facebook Page
+                    </a>
+                  </ListItemContent>
+                </ListItem>
+
+                <ListItem>
+                  <ListItemContent style={{ fontSize: '16px' }}>
+                    <i className="fa fa-twitter-square" aria-hidden="true" style={{ fontSize: "40px" }} />
+                    tsimionescu87
                   </ListItemContent>
                 </ListItem>
               </List>
