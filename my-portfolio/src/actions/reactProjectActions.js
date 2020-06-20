@@ -131,6 +131,7 @@ export const deleteReactProject = (react_project_id, props) => dispatch => {
       dispatch({
         type: DELETE_REACT_PROJECT_SUCCESS
       });
+      window.location.reload();
       fetchReactProjects();
       props.history.push('/api/projects');
     })

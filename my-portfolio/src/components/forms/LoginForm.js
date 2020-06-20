@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { login } from '../../actions/userActions';
 
-// Add Style later
-
 const LoginForm = props => {
   const [user, setUser] = useState({
     username: "",
@@ -66,4 +64,3 @@ const mapStatetoProps = state => {
 }
 
 export default connect(mapStatetoProps, { login })(LoginForm);
-// export default LoginForm;

@@ -132,6 +132,7 @@ export const deleteReduxProject = (redux_project_id, user_id, props) => dispatch
       dispatch({
         type: DELETE_REDUX_PROJECT_SUCCESS
       });
+      window.location.reload();
       fetchReduxProjects(user_id);
       props.history.push(`/api/reduxprojects`);
     })

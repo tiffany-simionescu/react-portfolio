@@ -125,6 +125,7 @@ export const deleteUser = (user_id, props) => dispatch => {
       dispatch({
         type: DELETE_USER_SUCCESS
       });
+      window.location.reload();
       fetchUsers();
       props.history.push('/');
     })

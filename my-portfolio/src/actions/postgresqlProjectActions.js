@@ -132,6 +132,7 @@ export const deletePostgresqlProject = (postgresql_project_id, user_id, props) =
       dispatch({
         type: DELETE_POSTGRESQL_PROJECT_SUCCESS
       });
+      window.location.reload();
       fetchPostgresqlProjects(user_id);
       props.history.push('/api/pgprojects');
     })

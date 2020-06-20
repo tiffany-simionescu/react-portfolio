@@ -131,6 +131,7 @@ export const deleteNodeProject = (node_project_id, user_id, props) => dispatch =
       dispatch({
         type: DELETE_NODE_PROJECT_SUCCESS
       });
+      window.location.reload();
       fetchNodeProjects(user_id);
       props.history.push('/api/nodeprojects');
     })

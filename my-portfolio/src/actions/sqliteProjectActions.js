@@ -111,6 +111,7 @@ export const editSqliteProject = (sqlite_project_id, sqlite_project) => dispatch
       dispatch({
         type: EDIT_SQLITE_PROJECT_SUCCESS
       });
+      window.location.reload();
       fetchSqliteProject(sqlite_project_id)
       console.log("editSqliteProject Success", res);
     })
