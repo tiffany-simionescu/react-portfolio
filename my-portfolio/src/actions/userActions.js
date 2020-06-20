@@ -63,6 +63,7 @@ export const login = (user, props) => dispatch => {
       });
       localStorage.setItem("token", res.data.authToken);
       props.history.push('/');
+      window.location.reload(false);
     })
     .catch(err => {
       dispatch({
@@ -76,6 +77,7 @@ export const login = (user, props) => dispatch => {
 export const logout = () => dispatch => {
   dispatch({ type: LOGOUT });
   localStorage.clear();
+  window.location.reload(false);
 }
 
 export const fetchUser = user_id => dispatch => {

@@ -23,7 +23,7 @@ function Nav(props) {
                   {!localStorage.getItem('token') ? (
                     <Link to="/login" className="link">Login</Link>
                    ) : (
-                    <Link to="/login" className="link"
+                    <Link to="/" className="link"
                     onClick={() => props.logout()}>Log Out</Link>
                    )}
                   {/* {props.loggedIn ? null : (
