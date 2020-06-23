@@ -25,8 +25,8 @@ const ReactProjectForm = props => {
     <div className="project-form">
       <div className="project-left-col">
         <img 
-          src="https://images.pexels.com/photos/556855/pexels-photo-556855.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-          alt="lake and trees"
+          src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80"
+          alt="laptop"
           style={{ borderRadius: "10px 0 0 10px", height: "550px", width: "500px", boxShadow: "0 15px 25px rgba(0,0,0,.6)" }}
         />
       </div>

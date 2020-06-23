@@ -24,7 +24,7 @@ class Projects extends Component {
     if (this.state.activeTab === 0) {
 
       return (
-        <div className="projects-grid">
+        <div className="projects-grid" id="react">
           {/* {this.props.react_projects &&
             // this.props.react_projects.map((react_project, index) => (
               // <ReactProjectCard key={index} react_project={react_project} />
@@ -44,7 +44,7 @@ class Projects extends Component {
       // }, []);
 
       return (
-        <div className="projects-grid">
+        <div className="projects-grid" id="redux">
           {/* {this.props.redux_projects &&
             this.props.redux_projects.map((redux_project, index) => (
               <ReduxProjectCard key={index} redux_project={redux_project} />
@@ -62,7 +62,7 @@ class Projects extends Component {
       // }, []);
 
       return (
-        <div className="projects-grid">
+        <div className="projects-grid" id="node">
           {/* {this.props.node_projects &&
             this.props.node_projects.map((node_project, index) => (
               <NodeProjectCard key={index} node_project={node_project} />
@@ -80,7 +80,7 @@ class Projects extends Component {
     // }, []);
 
     return (
-      <div className="projects-grid">
+      <div className="projects-grid" id="sqlite">
         {/* {this.props.sqlite_projects &&
           this.props.sqlite_projects.map((sqlite_project, index) => (
             <SqliteProjectCard key={index} sqlite_project={sqlite_project} />
@@ -98,7 +98,7 @@ class Projects extends Component {
     // }, []);
 
     return (
-      <div className="projects-grid">
+      <div className="projects-grid" id="postgresql">
         {/* {this.props.postgresql_projects &&
           this.props.postgresql_projects.map((postgresql_project, index) => (
             <PostgresqlProjectCard key={index} postgresql_project={postgresql_project} />

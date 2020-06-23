@@ -1,0 +1,68 @@
+.project-box {
+  /* position: absolute; */
+  /* top: 50%;
+  left: 50%; */
+  margin: auto;
+  width: 500px;
+  padding: 40px;
+  transform: translate(1%, 6%);
+  background: rgba(61, 45, 61, 0.6);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+  width: 400px;
+  position: relative;
+
+    h1 {
+      margin: 0 0 30px;
+      padding: 0;
+      color: #fff;
+      text-align: center;
+    }
+
+    .project-label {
+        input {
+          width: 100%;
+          padding: 10px 0;
+          font-size: 16px;
+          color: #fff;
+          margin-bottom: 30px;
+          border: none;
+          border-bottom: 1px solid #fff;
+          outline: none;
+          background: transparent;
+          font-size: 14px;
+          padding: 5px 0;
+
+            &:focus ~ label {
+              /* top: -25px; */
+              left: 0;
+              color: #03e9f4;
+              font-size: 16px;
+            }
+
+            &:not(:placeholder-shown) ~ label {
+              transform: translate(10%, -75%) scale(.9);
+              /* opacity: .25; */
+              color: #03e9f4;
+            }
+
+            &:not(:placeholder-shown) ~ label {
+              transform: translate(10%, -10%) scale(.9);
+              /* opacity: .25; */
+              color: #03e9f4;
+            }
+        }
+
+        label {
+          position: absolute;
+          top:0;
+          left: 0;
+          padding: 10px 0;
+          font-size: 16px;
+          color: #fff;
+          pointer-events: none;
+          transition: .5s;
+        }
+    }
+}

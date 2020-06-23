@@ -25,7 +25,7 @@ const ReduxProjectForm = props => {
     <div className="project-form">
       <div className="project-left-col">
         <img 
-          src="https://images.pexels.com/photos/172067/pexels-photo-172067.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
           alt="lake and trees"
           style={{ borderRadius: "10px 0 0 10px", height: "550px", width: "500px", boxShadow: "0 15px 25px rgba(0,0,0,.6)" }}
         />
@@ -97,7 +97,8 @@ const ReduxProjectForm = props => {
         ) : (
           <div>
             <h4>Only the Admin can add a new Redux Project.</h4>
-            <Link to="/projects" className="project-button">Return to Projects</Link>
+            {/* <Link to="/projects" className="project-button">Return to Projects</Link> */}
+            <a href="/projects" className="project-button">Return to Projects</a>
           </div>
         )} 
         </div>
