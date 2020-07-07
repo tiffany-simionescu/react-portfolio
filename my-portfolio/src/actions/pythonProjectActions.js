@@ -7,35 +7,35 @@ export const POST_INITIALIZE = "POST_INITIALIZE";
 export const DELETE_INITIALIZE = "DELETE_INITIALIZE";
 
 // == React Project Actions == //
-export const FETCH_REACT_PROJECT_SUCCESS = "FETCH_REACT_PROJECT_SUCCESS";
-export const FETCH_REACT_PROJECT_FAILURE = "FETCH_REACT_PROJECT_FAILURE";
-export const ADD_REACT_PROJECT_SUCCESS = "ADD_REACT_PROJECT_SUCCESS";
-export const ADD_REACT_PROJECT_FAILURE = "ADD_REACT_PROJECT_FAILURE";
-export const EDIT_REACT_PROJECT_SUCCESS = "EDIT_REACT_PROJECT_SUCCESS";
-export const EDIT_REACT_PROJECT_FAILURE = "EDIT_REACT_PROJECT_FAILURE";
-export const DELETE_REACT_PROJECT_SUCCESS = "DELETE_REACT_PROJECT_SUCCESS";
-export const DELETE_REACT_PROJECT_FAILURE = "DELETE_REACT_PROJECT_FAILURE";
+export const FETCH_PYTHON_PROJECT_SUCCESS = "FETCH_PYTHON_PROJECT_SUCCESS";
+export const FETCH_PYTHON_PROJECT_FAILURE = "FETCH_PYTHON_PROJECT_FAILURE";
+export const ADD_PYTHON_PROJECT_SUCCESS = "ADD_PYTHON_PROJECT_SUCCESS";
+export const ADD_PYTHON_PROJECT_FAILURE = "ADD_PYTHON_PROJECT_FAILURE";
+export const EDIT_PYTHON_PROJECT_SUCCESS = "EDIT_PYTHON_PROJECT_SUCCESS";
+export const EDIT_PYTHON_PROJECT_FAILURE = "EDIT_PYTHON_PROJECT_FAILURE";
+export const DELETE_PYTHON_PROJECT_SUCCESS = "DELETE_PYTHON_PROJECT_SUCCESS";
+export const DELETE_PYTHON_PROJECT_FAILURE = "DELETE_PYTHON_PROJECT_FAILURE";
 
 // == React Projects Actions == //
-export const FETCH_REACT_PROJECTS_SUCCESS = "FETCH_REACT_PROJECTS_SUCCESS";
-export const FETCH_REACT_PROJECTS_FAILURE = "FETCH_REACT_PROJECTS_FAILURE";
+export const FETCH_PYTHON_PROJECTS_SUCCESS = "FETCH_PYTHON_PROJECTS_SUCCESS";
+export const FETCH_PYTHON_PROJECTS_FAILURE = "FETCH_PYTHON_PROJECTS_FAILURE";
 
 
 // == React Projects Functions == //
-export const fetchReactProjects = () => dispatch => {
+export const fetchPythonProjects = () => dispatch => {
   dispatch({ type: FETCH_INITIALIZE });
 
   axiosWithAuth()
-    .get('/api/reactprojects')
+    .get('/api/pythonprojects')
     .then(res => {
       dispatch({
-        type: FETCH_REACT_PROJECTS_SUCCESS,
+        type: FETCH_PYTHON_PROJECTS_SUCCESS,
         payload: res.data
       });
     })
     .catch(err => {
       dispatch({
-        type: FETCH_REACT_PROJECTS_FAILURE,
+        type: FETCH_PYTHON_PROJECTS_FAILURE,
         payload: { err, message: err.message }
       });
       toast.error(err.message);
@@ -44,20 +44,20 @@ export const fetchReactProjects = () => dispatch => {
 
 
 // == React Project Functions == //
-export const fetchReactProject = react_project_id => dispatch => {
+export const fetchPythonProject = python_project_id => dispatch => {
   dispatch({ type: FETCH_INITIALIZE });
 
   axiosWithAuth()
-    .get(`/api/reactprojects/${react_project_id}`)
+    .get(`/api/pythonprojects/${python_project_id}`)
     .then(res => {
       dispatch({
-        type: FETCH_REACT_PROJECT_SUCCESS,
+        type: FETCH_PYTHON_PROJECT_SUCCESS,
         payload: res.data
       });
     })
     .catch(err => {
       dispatch({
-        type: FETCH_REACT_PROJECT_FAILURE,
+        type: FETCH_PYTHON_PROJECT_FAILURE,
         payload: { err, message: err.message }
       });
       toast.error(err.message);
@@ -82,62 +82,62 @@ export const fetchReactProject = react_project_id => dispatch => {
 //       });
 //     });
 // };
-export const addReactProject = (react_project, props) => dispatch => {
+export const addPythonProject = (python_project, props) => dispatch => {
   dispatch({ type: POST_INITIALIZE });
 
   axiosWithAuth()
-    .post('/api/reactprojects', react_project)
+    .post('/api/pythonprojects', python_project)
     .then(res => {
       dispatch({
-        type: ADD_REACT_PROJECT_SUCCESS,
+        type: ADD_PYTHON_PROJECT_SUCCESS,
         payload: res.data
       });
       props.history.push("/projects");
     })
     .catch(err => {
       dispatch({
-        type: ADD_REACT_PROJECT_FAILURE,
+        type: ADD_PYTHON_PROJECT_FAILURE,
         payload: { err, message: err.message }
       });
       toast.error(err.message);
     });
 };
 
-export const editReactProject = (react_project_id, react_project) => dispatch => {
+export const editPythonProject = (python_project_id, python_project) => dispatch => {
   axiosWithAuth()
-    .put(`/api/reactprojects/${react_project_id}`, react_project)
+    .put(`/api/pythonprojects/${python_project_id}`, python_project)
     .then(res => {
       dispatch({
-        type: EDIT_REACT_PROJECT_SUCCESS
+        type: EDIT_PYTHON_PROJECT_SUCCESS
       });
-      fetchReactProject(react_project_id)
-      console.log("editReactProject Success", res);
+      fetchPythonProject(python_project_id)
+      console.log("editPythonProject Success", res);
     })
     .catch(err => {
       dispatch({
-        type: EDIT_REACT_PROJECT_FAILURE,
+        type: EDIT_PYTHON_PROJECT_FAILURE,
         payload: { err, message: err.message }
       });
       toast.error(err.message);
     });
 };
 
-export const deleteReactProject = (react_project_id, props) => dispatch => {
+export const deletePythonProject = (python_project_id, props) => dispatch => {
   dispatch({ type: DELETE_INITIALIZE });
 
   axiosWithAuth()
-    .delete(`/api/reactprojects/${react_project_id}`)
+    .delete(`/api/pythonprojects/${python_project_id}`)
     .then(() => {
       dispatch({
-        type: DELETE_REACT_PROJECT_SUCCESS
+        type: DELETE_PYTHON_PROJECT_SUCCESS
       });
       window.location.reload();
-      fetchReactProjects();
+      fetchPythonProjects();
       props.history.push('/api/projects');
     })
     .catch(err => {
       dispatch({
-        type: DELETE_REACT_PROJECT_FAILURE,
+        type: DELETE_PYTHON_PROJECT_FAILURE,
         payload: { err, message: err.message }
       });
       toast.error(err.message);

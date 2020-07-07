@@ -22,7 +22,7 @@ class LandingPage extends Component {
 
               <hr />
 
-              <p>HTML/CSS | JavaScript | KnexJS | React | Redux | NodeJS | Express | SQLite | PostgreSQL</p>
+              <p>HTML/CSS | JavaScript | KnexJS | React | Redux | NodeJS | Express | SQLite | PostgreSQL | Python</p>
 
               <div className="social-links">
 

@@ -7,6 +7,7 @@ import ReduxProjectCardContainer from './containers/ReduxProjectCardContainer';
 import NodeProjectCardContainer from './containers/NodeProjectCardContainer';
 import SqliteProjectCardContainer from './containers/SqliteProjectCardContainer';
 import PostgresqlProjectCardContainer from './containers/PostgresqlProjectCardContainer';
+import PythonProjectCardContainer from './containers/PythonProjectCardContainer';
 
 // React Mdl 
 import { Tabs, Tab, Grid, Cell } from 'react-mdl';
@@ -107,7 +108,23 @@ class Projects extends Component {
         <Link to="/addpostgresql" className="project-button">Add PostgreSQL Project</Link>
       </div>
     )
-    }
+    } else if (this.state.activeTab === 5) {
+
+      // useEffect(() => {
+      //   this.props.fetchPostgresqlProjects(this.props.postgresql_project_id);
+      // }, []);
+  
+      return (
+        <div className="projects-grid" id="python">
+          {/* {this.props.postgresql_projects &&
+            this.props.postgresql_projects.map((postgresql_project, index) => (
+              <PostgresqlProjectCard key={index} postgresql_project={postgresql_project} />
+            ))} */}
+          <PythonProjectCardContainer />
+          <Link to="/addpython" className="project-button">Add Python Project</Link>
+        </div>
+      )
+      }
   }
 
   render() {
@@ -119,6 +136,7 @@ class Projects extends Component {
           <Tab>NodeJS</Tab>
           <Tab>Sqlite</Tab>
           <Tab>PostgreSQL</Tab>
+          <Tab>Python</Tab>
         </Tabs>
 
           <Grid>

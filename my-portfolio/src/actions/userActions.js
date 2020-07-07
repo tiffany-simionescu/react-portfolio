@@ -123,7 +123,7 @@ export const deleteUser = (user_id, props) => dispatch => {
 
   axiosWithAuth()
     .delete(`/api/users/${user_id}`)
-    .then(res => {
+    .then(() => {
       dispatch({
         type: DELETE_USER_SUCCESS
       });

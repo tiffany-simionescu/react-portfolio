@@ -128,7 +128,7 @@ export const deleteReduxProject = (redux_project_id, user_id, props) => dispatch
 
   axiosWithAuth()
     .delete(`/api/reduxprojects/${redux_project_id}`)
-    .then(res => {
+    .then(() => {
       dispatch({
         type: DELETE_REDUX_PROJECT_SUCCESS
       });

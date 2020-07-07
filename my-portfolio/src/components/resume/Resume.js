@@ -134,6 +134,10 @@ class Resume extends Component {
               skill="PostgreSQL"
               progress="90"
             />
+            <Skills 
+              skill="Python"
+              progress="87"
+            />
 
           </Cell>
         </Grid>

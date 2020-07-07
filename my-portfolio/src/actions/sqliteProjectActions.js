@@ -129,7 +129,7 @@ export const deleteSqliteProject = (sqlite_project_id, user_id, props) => dispat
 
   axiosWithAuth()
     .delete(`/api/sqliteprojects/${sqlite_project_id}`)
-    .then(res => {
+    .then(() => {
       dispatch({
         type: DELETE_SQLITE_PROJECT_SUCCESS
       });

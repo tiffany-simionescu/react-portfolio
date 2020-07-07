@@ -128,14 +128,18 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
-.header-color {
+.navigation .header-color {
   background: #FEAC5E;
   background: -webkit-linear-gradient(to left, #4BC0C8, #C779D0, #FEAC5E);
   background: linear-gradient(to left, #4BC0C8, #C779D0, #FEAC5E);
 }
-.header-color a {
+.navigation .header-color a {
   color: white;
   text-decoration: none;
+}
+.navigation .header-color a:hover {
+  box-shadow: inset 0px -5px 0px white, inset 0px 5px 0px white;
+  transition: width 2s;
 }
 .landing-grid {
   background: linear-gradient(to left, rgba(75, 192, 200, 0.3), rgba(199, 121, 208, 0.3), rgba(254, 172, 94, 0.3)), url('https://images.pexels.com/photos/3740383/pexels-photo-3740383.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');

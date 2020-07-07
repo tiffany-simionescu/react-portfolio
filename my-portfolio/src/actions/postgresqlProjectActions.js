@@ -128,7 +128,7 @@ export const deletePostgresqlProject = (postgresql_project_id, user_id, props) =
 
   axiosWithAuth()
     .delete(`/api/pgprojects/${postgresql_project_id}`)
-    .then(res => {
+    .then(() => {
       dispatch({
         type: DELETE_POSTGRESQL_PROJECT_SUCCESS
       });

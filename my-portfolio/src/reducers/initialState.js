@@ -14,6 +14,7 @@ const initialState = {
   displayedNodeProjects: [],
   displayedSqliteProjects: [],
   displayedPostgresqlProjects: [],
+  displayedPythonProjects: [],
 
   react_project: {
     react_project_id: "",
@@ -58,6 +59,15 @@ const initialState = {
     postgresql_project_description: "",
     postgresql_project_github_link: "",
     postgresql_project_live_link: ""
+  },
+
+  python_project: {
+    python_project_id: "",
+    python_project_image: "",
+    python_project_title: "",
+    python_project_description: "",
+    python_project_github_link: "",
+    python_project_live_link: ""
   },
 
   isFetching: false,
