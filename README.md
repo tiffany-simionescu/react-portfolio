@@ -5,7 +5,7 @@ To view the live portfolio, please visit [My Portfolio Page](http://tiffanysimio
 
 An updated portfolio that showcases front and back end development. To view the back end API code, please visit [react-portfolio-be](https://github.com/tiffany-simionescu/react-portfolio-be)
 
-## Functionality
+## Functionality 
 
 This site was created to be able to view all current and past work in regards to full stack web development. The back end was created so the admin can add, edit or remove projects, as well as to demonstrate understanding of database construction. 
 
