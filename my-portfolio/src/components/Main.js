@@ -12,6 +12,7 @@ import ReduxProjectForm from './forms/ReduxProjectForm';
 import NodeProjectForm from './forms/NodeProjectForm';
 import SqliteProjectForm from './forms/SqliteProjectForm';
 import PostgresqlProjectForm from './forms/PostgresqlProjectForm';
+import PythonProjectForm from './forms/PythonProjectForm';
 
 const Main = () => (
   <Switch>
@@ -27,6 +28,7 @@ const Main = () => (
     <Route path="/addnode" component={NodeProjectForm} />
     <Route path="/addsqlite" component={SqliteProjectForm} />
     <Route path="/addpostgresql" component={PostgresqlProjectForm} />
+    <Route path="/addpython" component={PythonProjectForm} />
   </Switch>
 )
 
