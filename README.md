@@ -27,3 +27,4 @@ It is currently functional, but still needs projects added
  
  - Add more projects
  - Eventually add Angular projects and MongoDB projects
+ 
