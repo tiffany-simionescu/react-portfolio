@@ -28,7 +28,7 @@ class Resume extends Component {
               Tiffany Simionescu
             </h2>
             <h4 style={{ color: 'grey'}}>
-              Programmer
+              Web Developer
             </h4>
             <hr />
             <p>I love learning about new design elements for website 
@@ -59,16 +59,16 @@ class Resume extends Component {
                 startYear={2019}
                 endYear="Current"
                 schoolName="Lambda School"
-                schoolDescription="Lambda School is a 6+ month 
-                  Computer Science & Software Engineering Academy 
-                  that provides an immersive hands-on curriculum 
-                  with a focus on computer science, web and mobile 
-                  development, UX design, and data science."
+                schoolDescription="Lambda School is a 9+ month computer 
+                science & software engineering program that provides an 
+                immersive hands-on curriculum with a focus on computer 
+                science, and full-stack web development. "
               />
               <Education
                 startYear={2009}
                 endYear={2010}
-                schoolName=" Lynn College of Communication and Design"
+                schoolName=" Lynn College of Communication and Design 
+                (formally known as Digital Media Arts College)"
                 schoolDescription="Lynn College of Communication and 
                 Design offers specialized Bachelor of Fine Arts degrees 
                 in Computer Animation and Graphic Design as well as 
@@ -84,9 +84,9 @@ class Resume extends Component {
                 endYear={2013}
                 jobName="Advanced Cash Fast"
                 jobTitle="Loan Processing Clerk"
-                jobDescription1="Received calls from potential customers who were interested in applying for advance payday loans."
-                jobDescription2="Gathered sensitive documentation for loan application processing to determine eligibility."
-                jobDescription3="Reviewed all proper documentation and determined the rejection or approval of a loan application."
+                jobDescription1="Received calls from potential customers interested in applying for loans."
+                jobDescription2="Gathered sensitive documents for loan processing to determine eligibility."
+                jobDescription3="Reviewed all proper documents and determined rejection or approval of a loan."
               />
               <Experience
                 startYear={2010}
@@ -94,17 +94,17 @@ class Resume extends Component {
                 jobName="Sketch It Graphics"
                 jobTitle="Graphic Designer | Secretary"
                 jobDescription1="Developed and edited customer designs for marketing and fashion purposes."
-                jobDescription2="Responsible for selling products and services to potential customers."
-                jobDescription3="Managed the company's finances: Accounts Payable, Accounts Receivable department."
+                jobDescription2="Operated a wide variety of printers for clothing design and screen printing."
+                jobDescription3="Managed the company's finances: Accounts Payable, Accounts Receivable."
               />
               <Experience 
                 startYear={2009}
                 endYear={2009}
                 jobName="Staples"
                 jobTitle="Design and Print Associate"
-                jobDescription1="Constructed and designed incoming print requests from customers."
-                jobDescription2="Utilized various types of printers and graphic design software."
-                jobDescription3="Provided excellent customer service by advising various print options based on the customer's needs."
+                jobDescription1="Developed and edited customer designs for marketing and fashion purposes."
+                jobDescription2="Operated a wide variety of printers for clothing design and screen printing."
+                jobDescription3="Responsible for selling products and services to potential customers."
               />
 
             <hr />

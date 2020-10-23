@@ -142,12 +142,12 @@ class ContactForm extends Component {
                   </ListItemContent>
                 </ListItem>
 
-                <ListItem>
+                {/* <ListItem>
                   <ListItemContent style={{ fontSize: '16px' }}>
                     <i className="fa fa-twitter-square" aria-hidden="true" style={{ fontSize: "40px" }} />
                     tsimionescu87
                   </ListItemContent>
-                </ListItem>
+                </ListItem> */}
               </List>
             </div>
 

@@ -42,9 +42,9 @@ class LandingPage extends Component {
                 </a>
 
                 {/* Twitter */}
-                <a href="https://twitter.com/tsimionescu87" rel="noopener noreferrer" target="_blank">
+                {/* <a href="https://twitter.com/tsimionescu87" rel="noopener noreferrer" target="_blank">
                   <i className="fa fa-twitter-square" aria-hidden="true" />
-                </a>
+                </a> */}
 
               </div>
             </div>

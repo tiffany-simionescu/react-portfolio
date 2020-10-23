@@ -15,7 +15,6 @@ function Nav(props) {
           <Header className="header-color" title={<Link to='/'>Tiffany Simionescu</Link>} scroll>
               <Navigation>
                   <Link className="nav-link" to="/resume">Resume</Link>
-                  <Link className="nav-link" to="/aboutme">About Me</Link>
                   <Link className="nav-link" to="/projects">Projects</Link>
                   <Link className="nav-link" to="/contact">Contact</Link>
                   <Link className="nav-link" to="/register">Register</Link>
