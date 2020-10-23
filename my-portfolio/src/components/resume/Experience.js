@@ -21,9 +21,9 @@ class Experience3 extends Component {
             {this.props.jobName}
           </h5>
           <ul>
-            <li>{'\u2B24'} {this.props.jobDescription1}</li>
-            <li>{`\u2B24`} {this.props.jobDescription2}</li>
-            <li>{`\u2B24`} {this.props.jobDescription3}</li>
+            <li>{'\u2022'} {this.props.jobDescription1}</li>
+            <li>{`\u2022`} {this.props.jobDescription2}</li>
+            <li>{`\u2022`} {this.props.jobDescription3}</li>
           </ul>
         </Cell>
       </Grid>
