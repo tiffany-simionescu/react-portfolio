@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Avatar from '../images/avatar.jpg';
+import Avatar from '../images/profile_pic.jpg';
 
 // React Mdl
 import { Grid, Cell } from 'react-mdl';

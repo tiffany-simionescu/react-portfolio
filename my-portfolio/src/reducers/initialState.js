@@ -11,7 +11,6 @@ const initialState = {
   },
   displayedReactProjects: [],
   displayedReduxProjects: [],
-  displayedNodeProjects: [],
   displayedSqliteProjects: [],
   displayedPostgresqlProjects: [],
   displayedPythonProjects: [],
@@ -32,15 +31,6 @@ const initialState = {
     redux_project_description: "",
     redux_project_github_link: "",
     redux_project_live_link: ""
-  },
-
-  node_project: {
-    node_project_id: "",
-    node_project_image: "",
-    node_project_title: "",
-    node_project_description: "",
-    node_project_github_link: "",
-    node_project_live_link: ""
   },
 
   sqlite_project: {

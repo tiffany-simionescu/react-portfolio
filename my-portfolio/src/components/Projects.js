@@ -4,7 +4,6 @@ import { Route, Link } from 'react-router-dom';
 
 import ReactProjectCardContainer from './containers/ReactProjectCardContainer';
 import ReduxProjectCardContainer from './containers/ReduxProjectCardContainer';
-import NodeProjectCardContainer from './containers/NodeProjectCardContainer';
 import SqliteProjectCardContainer from './containers/SqliteProjectCardContainer';
 import PostgresqlProjectCardContainer from './containers/PostgresqlProjectCardContainer';
 import PythonProjectCardContainer from './containers/PythonProjectCardContainer';
@@ -56,25 +55,9 @@ class Projects extends Component {
       )
 
     // Node Projects
-    } else if (this.state.activeTab === 2) {
-
-      // useEffect(() => {
-      //   this.props.fetchNodeProjects(this.props.node_project_id);
-      // }, []);
-
-      return (
-        <div className="projects-grid" id="node">
-          {/* {this.props.node_projects &&
-            this.props.node_projects.map((node_project, index) => (
-              <NodeProjectCard key={index} node_project={node_project} />
-            ))} */}
-            <NodeProjectCardContainer />
-            <Link to="/addnode" className="project-button">Add Node Project</Link>
-        </div>
-      )
 
     // Sqlite Projects
-  } else if (this.state.activeTab === 3) {
+  } else if (this.state.activeTab === 2) {
 
     // useEffect(() => {
     //   this.props.fetchSqliteProjects(this.props.sqlite_project_id);
@@ -92,7 +75,7 @@ class Projects extends Component {
     )
 
     // PostgreSQL Projects
-  } else if (this.state.activeTab === 4) {
+  } else if (this.state.activeTab === 3) {
 
     // useEffect(() => {
     //   this.props.fetchPostgresqlProjects(this.props.postgresql_project_id);
@@ -108,7 +91,7 @@ class Projects extends Component {
         <Link to="/addpostgresql" className="project-button">Add PostgreSQL Project</Link>
       </div>
     )
-    } else if (this.state.activeTab === 5) {
+    } else if (this.state.activeTab === 4) {
 
       // useEffect(() => {
       //   this.props.fetchPostgresqlProjects(this.props.postgresql_project_id);
@@ -131,9 +114,8 @@ class Projects extends Component {
     return (
       <div className="category-tabs">
         <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })} ripple>
-          <Tab>React</Tab>
+          <Tab>React / JavaScript</Tab>
           <Tab>Redux</Tab>
-          <Tab>NodeJS</Tab>
           <Tab>Sqlite</Tab>
           <Tab>PostgreSQL</Tab>
           <Tab>Python</Tab>
