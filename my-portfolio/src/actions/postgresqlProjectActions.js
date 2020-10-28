@@ -26,7 +26,7 @@ export const fetchPostgresqlProjects = ()=> dispatch => {
   dispatch({ type: FETCH_INITIALIZE });
 
   axiosWithAuth()
-    .get('/api/pgprojects')
+    .get('/api/postgresqlprojects')
     .then(res => {
       dispatch({
         type: FETCH_POSTGRESQL_PROJECTS_SUCCESS,
@@ -48,7 +48,7 @@ export const fetchPostgresqlProject = postgresql_project_id => dispatch => {
   dispatch({ type: FETCH_INITIALIZE });
 
   axiosWithAuth()
-    .get(`/api/pgprojects/${postgresql_project_id}`)
+    .get(`/api/postgresqlprojects/${postgresql_project_id}`)
     .then(res => {
       dispatch({
         type: FETCH_POSTGRESQL_PROJECT_SUCCESS,
@@ -93,7 +93,7 @@ export const addPostgresqlProject = (postgresql_project, props) => dispatch => {
         type: ADD_POSTGRESQL_PROJECT_SUCCESS,
         payload: res.data
       });
-      props.history.push("/projects");
+      props.history.push("/");
     })
     .catch(err => {
       dispatch({
@@ -106,7 +106,7 @@ export const addPostgresqlProject = (postgresql_project, props) => dispatch => {
 
 export const editPostgresqlProject = (postgresql_project_id, postgresql_project) => dispatch => {
   axiosWithAuth()
-    .put(`/api/pgprojects/${postgresql_project_id}`, postgresql_project)
+    .put(`/api/postgresqlprojects/${postgresql_project_id}`, postgresql_project)
     .then(res => {
       dispatch({
         type: EDIT_POSTGRESQL_PROJECT_SUCCESS
@@ -127,14 +127,14 @@ export const deletePostgresqlProject = (postgresql_project_id, user_id, props) =
   dispatch({ type: DELETE_INITIALIZE });
 
   axiosWithAuth()
-    .delete(`/api/pgprojects/${postgresql_project_id}`)
+    .delete(`/api/postgresqlprojects/${postgresql_project_id}`)
     .then(() => {
       dispatch({
         type: DELETE_POSTGRESQL_PROJECT_SUCCESS
       });
       window.location.reload();
       fetchPostgresqlProjects(user_id);
-      props.history.push('/api/pgprojects');
+      props.history.push('/api/postgresqlprojects');
     })
     .catch(err => {
       dispatch({
