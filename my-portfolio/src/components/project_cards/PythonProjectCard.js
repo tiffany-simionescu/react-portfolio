@@ -42,6 +42,7 @@ function PythonProjectCard(props) {
     props.editPythonProject(props.python_project_id, pythonProject);
     setEditMode(false);
     props.fetchPythonProject(props.python_project_id);
+    window.location.reload(true);
   };
 
   const triggerEditConfirmation = e => {

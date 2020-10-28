@@ -42,6 +42,7 @@ function ReactProjectCard(props) {
     props.editReactProject(props.react_project_id, reactProject);
     setEditMode(false);
     props.fetchReactProject(props.react_project_id);
+    window.location.reload(true);
   };
 
   const triggerEditConfirmation = e => {

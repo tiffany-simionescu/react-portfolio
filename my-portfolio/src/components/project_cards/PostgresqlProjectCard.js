@@ -42,6 +42,7 @@ function PostgresqlProjectCard(props) {
     props.editPostgresqlProject(props.postgresql_project_id, postgresqlProject);
     setEditMode(false);
     props.fetchPostgresqlProject(props.postgresql_project_id);
+    window.location.reload(true);
   };
 
   const triggerEditConfirmation = e => {

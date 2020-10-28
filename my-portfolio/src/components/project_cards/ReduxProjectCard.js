@@ -42,6 +42,7 @@ function ReduxProjectCard(props) {
     props.editReduxProject(props.redux_project_id, reduxProject);
     setEditMode(false);
     props.fetchReduxProject(props.redux_project_id);
+    window.location.reload(true);
   };
 
   const triggerEditConfirmation = e => {

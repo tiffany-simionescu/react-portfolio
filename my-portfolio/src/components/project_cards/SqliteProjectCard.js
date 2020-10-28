@@ -42,6 +42,7 @@ function SqliteProjectCard(props) {
     props.editSqliteProject(props.sqlite_project_id, sqliteProject);
     setEditMode(false);
     props.fetchSqliteProject(props.sqlite_project_id);
+    window.location.reload(true);
   };
 
   const triggerEditConfirmation = e => {
