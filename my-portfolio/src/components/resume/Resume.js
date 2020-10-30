@@ -57,7 +57,7 @@ class Resume extends Component {
             <h2>Education</h2>
               <Education
                 startYear={2019}
-                endYear="Current"
+                endYear={2020}
                 schoolName="Lambda School"
                 schoolDescription="Lambda School is a 9+ month computer 
                 science & software engineering program that provides an 
@@ -65,8 +65,8 @@ class Resume extends Component {
                 science, and full-stack web development. "
               />
               <Education
-                startYear={2009}
-                endYear={2010}
+                startYear={2010}
+                endYear={2011}
                 schoolName=" Lynn College of Communication and Design 
                 (formally known as Digital Media Arts College)"
                 schoolDescription="Lynn College of Communication and 
