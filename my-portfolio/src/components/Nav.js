@@ -14,12 +14,12 @@ function Nav(props) {
       <Layout>
           <Header className="header-color" title={<Link to='/'>Tiffany Simionescu</Link>} scroll>
               <Navigation>
-                  <Link className="nav-link" to="/resume">Resume</Link>
-                  <Link className="nav-link" to="/projects">Projects</Link>
-                  <Link className="nav-link" to="/contact">Contact</Link>
-                  <Link className="nav-link" to="/register">Register</Link>
+                  <Link className="nav-link" to="/#resume">Resume</Link>
+                  <Link className="nav-link" to="/#projects">Projects</Link>
+                  <Link className="nav-link" to="/#contact">Contact</Link>
+                  <Link className="nav-link" to="/#register">Register</Link>
                   {!localStorage.getItem('token') ? (
-                    <Link className="nav-link" to="/login" className="link">Login</Link>
+                    <Link className="nav-link" to="/#login" className="link">Login</Link>
                    ) : (
                     <Link className="nav-link" to="/" className="link"
                     onClick={() => props.logout()}>Log Out</Link>
@@ -37,15 +37,15 @@ function Nav(props) {
           <Drawer className="drawer-link" title={<Link style={{ textDecoration: 'none', color: 'black' }}
         to='/'>Tiffany Simionescu</Link>}>
               <Navigation>
-                  <Link to="/resume">Resume</Link>
-                  <Link to="/aboutme">About Me</Link>
-                  <Link to="/projects">Projects</Link>
-                  <Link to="/contact">Contact</Link>
-                  <Link to="/register">Register</Link>
+                  <Link to="/#resume">Resume</Link>
+                  <Link to="/#aboutme">About Me</Link>
+                  <Link to="/#projects">Projects</Link>
+                  <Link to="/#contact">Contact</Link>
+                  <Link to="/#register">Register</Link>
                   {!localStorage.getItem('token') ? 
-                    <Link to="/login" className="link">Login</Link>
+                    <Link to="/#login" className="link">Login</Link>
                     :
-                    <Link to="/login" className="link"
+                    <Link to="/#login" className="link"
                     onClick={() => props.logout()}>Log Out</Link>
                   }
                   {/* {props.loggedIn ? null : (

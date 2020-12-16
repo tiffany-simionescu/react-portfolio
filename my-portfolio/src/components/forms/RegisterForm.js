@@ -100,7 +100,7 @@ const RegisterForm = props => {
       </form>
 
       <p className="have-account">Have an Account?
-        <Link to="/login" className="have-account-link"> Login</Link>
+        <Link to="/#login" className="have-account-link"> Login</Link>
       </p>
     </div>
     </div>

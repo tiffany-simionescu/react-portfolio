@@ -91,14 +91,14 @@ const ReduxProjectForm = props => {
             </div>
           <div className="project-form-button">
             <button type="submit" className="project-button">Add Redux Project</button>
-            <Link to="/projects" className="project-button cancel-button">Cancel</Link>
+            <Link to="/#projects" className="project-button cancel-button">Cancel</Link>
           </div>
         </form>
         ) : (
           <div>
             <h4>Only the Admin can add a new Redux Project.</h4>
             {/* <Link to="/projects" className="project-button">Return to Projects</Link> */}
-            <a href="/projects" className="project-button">Return to Projects</a>
+            <a href="/#projects" className="project-button">Return to Projects</a>
           </div>
         )} 
         </div>
