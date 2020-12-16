@@ -50,7 +50,7 @@ const LoginForm = props => {
         </form>
         
         <p className="no-account">No Account?
-          <Link to="/#register" className="no-account-link"> Create One</Link>
+          <Link to="/#/register" className="no-account-link"> Create One</Link>
         </p>
       </div>
     </div>

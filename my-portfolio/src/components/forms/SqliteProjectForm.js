@@ -97,7 +97,7 @@ const SqliteProjectForm = props => {
         ) : (
           <div>
             <h4>Only the Admin can add a new SQLite Project.</h4>
-            <Link to="/#projects" className="project-button">Return to Projects</Link>
+            <Link to="/#/projects" className="project-button">Return to Projects</Link>
           </div>
         )} 
         </div>
