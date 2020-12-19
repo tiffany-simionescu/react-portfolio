@@ -91,13 +91,13 @@ const ReactProjectForm = props => {
             </div>
           <div className="project-form-button">
             <button type="submit" className="project-button">Add React Project</button>
-            <Link to="/#/projects" className="project-button cancel-button">Cancel</Link>
+            <Link to="/projects" className="project-button cancel-button">Cancel</Link>
           </div>
         </form>
         ) : (
           <div>
             <h4>Only the Admin can add a new React Project.</h4>
-            <Link to="/#/projects" className="project-button">Return to Projects</Link>
+            <Link to="/projects" className="project-button">Return to Projects</Link>
           </div>
         )} 
         </div>

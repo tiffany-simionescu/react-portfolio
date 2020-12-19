@@ -32,7 +32,7 @@ class Projects extends Component {
             ))} */}
             <ReactProjectCardContainer />
           {/* <ReactProjectCardContainer react_project_id={this.props.react_project_id} /> */}
-          <Link to="/#/addreact" className="project-button">Add React Project</Link>
+          <Link to="/addreact" className="project-button">Add React Project</Link>
         </div>
       )
 
@@ -50,7 +50,7 @@ class Projects extends Component {
               <ReduxProjectCard key={index} redux_project={redux_project} />
             ))} */}
           <ReduxProjectCardContainer />
-          <Link to="/#/addredux" className="project-button">Add Redux Project</Link>
+          <Link to="/addredux" className="project-button">Add Redux Project</Link>
         </div>
       )
 
@@ -70,7 +70,7 @@ class Projects extends Component {
             <SqliteProjectCard key={index} sqlite_project={sqlite_project} />
           ))} */}
         <SqliteProjectCardContainer />
-        <Link to="/#/addsqlite" className="project-button">Add Sqlite Project</Link>
+        <Link to="/addsqlite" className="project-button">Add Sqlite Project</Link>
       </div>
     )
 
@@ -88,7 +88,7 @@ class Projects extends Component {
             <PostgresqlProjectCard key={index} postgresql_project={postgresql_project} />
           ))} */}
         <PostgresqlProjectCardContainer />
-        <Link to="/#/addpostgresql" className="project-button">Add PostgreSQL Project</Link>
+        <Link to="/addpostgresql" className="project-button">Add PostgreSQL Project</Link>
       </div>
     )
     } else if (this.state.activeTab === 4) {
@@ -104,7 +104,7 @@ class Projects extends Component {
               <PostgresqlProjectCard key={index} postgresql_project={postgresql_project} />
             ))} */}
           <PythonProjectCardContainer />
-          <Link to="/#/addpython" className="project-button">Add Python Project</Link>
+          <Link to="/addpython" className="project-button">Add Python Project</Link>
         </div>
       )
       }

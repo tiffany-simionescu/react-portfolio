@@ -16,16 +16,16 @@ import PythonProjectForm from './forms/PythonProjectForm';
 const Main = () => (
   <Switch>
     <Route exact path="/" component={LandingPage} />
-    <Route path="/#contact" component={ContactForm} />
-    <Route path="/#projects" component={Projects} />
-    <Route path="/#resume" component={Resume} />
-    <Route path="/#login" component={LoginForm} />
-    <Route path="/#register" component={RegisterForm} />
-    <Route path="/#addreact" component={ReactProjectForm} />
-    <Route path="/#addredux" component={ReduxProjectForm} />
-    <Route path="/#addsqlite" component={SqliteProjectForm} />
-    <Route path="/#addpostgresql" component={PostgresqlProjectForm} />
-    <Route path="/#addpython" component={PythonProjectForm} />
+    <Route path="/contact" component={ContactForm} />
+    <Route path="/projects" component={Projects} />
+    <Route path="/resume" component={Resume} />
+    <Route path="/login" component={LoginForm} />
+    <Route path="/register" component={RegisterForm} />
+    <Route path="/addreact" component={ReactProjectForm} />
+    <Route path="/addredux" component={ReduxProjectForm} />
+    <Route path="/addsqlite" component={SqliteProjectForm} />
+    <Route path="/addpostgresql" component={PostgresqlProjectForm} />
+    <Route path="/addpython" component={PythonProjectForm} />
   </Switch>
 )
 
