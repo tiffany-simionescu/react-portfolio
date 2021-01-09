@@ -1,5 +1,6 @@
 import React from 'react';
-import '../App.css';
+// import '../App.css';
+import '../css/index.css';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { logout } from '../actions/userActions';

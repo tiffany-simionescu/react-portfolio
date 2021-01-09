@@ -225,10 +225,10 @@ code {
 }
 .resume-left-col .project-button {
   box-shadow: inset 0px 1px 0px 0px #efdcfb;
-  background: linear-gradient(to bottom, #4BC0C8 5%, #bc80ea 100%);
-  background-color: #dfbdfa;
+  background: linear-gradient(to bottom, #1E8449 5%, #28b362 100%);
+  background-color: #1E8449;
   border-radius: 6px;
-  border: 1px solid #c584f3;
+  border: 1px solid #1E8449;
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
@@ -236,15 +236,15 @@ code {
   font-weight: bold;
   padding: 10px 0;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #9752cc;
+  text-shadow: 0px 1px 0px #1E8449;
   display: flex;
   justify-content: center;
   margin: 20px 0;
   width: 250px;
 }
 .resume-left-col .project-button:hover {
-  background: linear-gradient(to bottom, #bc80ea 5%, #FEAC5E 100%);
-  background-color: #bc80ea;
+  background: linear-gradient(to bottom, #28b362 5%, #1E8449 100%);
+  background-color: #1E8449;
 }
 .resume-left-col .project-button:active {
   position: relative;
@@ -346,26 +346,26 @@ code {
 }
 .project-card-container .project-card .project-button {
   box-shadow: inset 0px 1px 0px 0px #efdcfb;
-  background: linear-gradient(to bottom, #4BC0C8 5%, #bc80ea 100%);
-  background-color: #dfbdfa;
+  background: linear-gradient(to bottom, #1E8449 5%, #28b362 100%);
+  background-color: #1E8449;
   border-radius: 6px;
-  border: 1px solid #c584f3;
+  border: 1px solid #1E8449;
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
   font-size: 15px;
   font-weight: bold;
-  padding: 10px 24px;
+  padding: 10px 0;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #9752cc;
+  text-shadow: 0px 1px 0px #1E8449;
   display: flex;
   justify-content: center;
-  margin: 50px auto;
+  margin: 40px 0;
   width: 250px;
 }
 .project-card-container .project-card .project-button:hover {
-  background: linear-gradient(to bottom, #bc80ea 5%, #FEAC5E 100%);
-  background-color: #bc80ea;
+  background: linear-gradient(to bottom, #28b362 5%, #1E8449 100%);
+  background-color: #1E8449;
 }
 .project-card-container .project-card .project-button:active {
   position: relative;
@@ -373,26 +373,26 @@ code {
 }
 .project-card-container .project-card .delete-link {
   box-shadow: inset 0px 1px 0px 0px #efdcfb;
-  background: linear-gradient(to bottom, #4BC0C8 5%, #bc80ea 100%);
-  background-color: #dfbdfa;
+  background: linear-gradient(to bottom, #1E8449 5%, #28b362 100%);
+  background-color: #1E8449;
   border-radius: 6px;
-  border: 1px solid #c584f3;
+  border: 1px solid #1E8449;
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
   font-size: 15px;
   font-weight: bold;
-  padding: 5px 15px;
+  padding: 10px 0;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #9752cc;
+  text-shadow: 0px 1px 0px #1E8449;
   display: flex;
-  justify-content: flex-end;
-  margin: auto;
-  width: 50px;
+  justify-content: center;
+  margin: 20px 0;
+  width: 250px;
 }
 .project-card-container .project-card .delete-link:hover {
-  background: linear-gradient(to bottom, #bc80ea 5%, #FEAC5E 100%);
-  background-color: #bc80ea;
+  background: linear-gradient(to bottom, #28b362 5%, #1E8449 100%);
+  background-color: #1E8449;
 }
 .project-card-container .project-card .delete-link:active {
   position: relative;
@@ -401,29 +401,30 @@ code {
 .category-tabs .content .projects-grid {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .category-tabs .content .projects-grid .project-button {
   box-shadow: inset 0px 1px 0px 0px #efdcfb;
-  background: linear-gradient(to bottom, #4BC0C8 5%, #bc80ea 100%);
-  background-color: #dfbdfa;
+  background: linear-gradient(to bottom, #1E8449 5%, #28b362 100%);
+  background-color: #1E8449;
   border-radius: 6px;
-  border: 1px solid #c584f3;
+  border: 1px solid #1E8449;
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
   font-size: 15px;
   font-weight: bold;
-  padding: 10px 24px;
+  padding: 10px 0;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #9752cc;
+  text-shadow: 0px 1px 0px #1E8449;
   display: flex;
   justify-content: center;
-  margin: 50px auto;
+  margin: 20px 0;
   width: 250px;
 }
 .category-tabs .content .projects-grid .project-button:hover {
-  background: linear-gradient(to bottom, #bc80ea 5%, #FEAC5E 100%);
-  background-color: #bc80ea;
+  background: linear-gradient(to bottom, #28b362 5%, #1E8449 100%);
+  background-color: #1E8449;
 }
 .category-tabs .content .projects-grid .project-button:active {
   position: relative;
@@ -502,26 +503,26 @@ code {
 }
 .project-form .project-right-col .project-button {
   box-shadow: inset 0px 1px 0px 0px #efdcfb;
-  background: linear-gradient(to bottom, #4BC0C8 5%, #bc80ea 100%);
-  background-color: #dfbdfa;
+  background: linear-gradient(to bottom, #1E8449 5%, #28b362 100%);
+  background-color: #1E8449;
   border-radius: 6px;
-  border: 1px solid #c584f3;
+  border: 1px solid #1E8449;
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
   font-size: 15px;
   font-weight: bold;
-  padding: 10px 24px;
+  padding: 10px 0;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #9752cc;
+  text-shadow: 0px 1px 0px #1E8449;
   display: flex;
   justify-content: center;
-  margin: 20px auto;
+  margin: 20px 0;
   width: 250px;
 }
 .project-form .project-right-col .project-button:hover {
-  background: linear-gradient(to bottom, #bc80ea 5%, #FEAC5E 100%);
-  background-color: #bc80ea;
+  background: linear-gradient(to bottom, #28b362 5%, #1E8449 100%);
+  background-color: #1E8449;
 }
 .project-form .project-right-col .project-button:active {
   position: relative;
@@ -615,10 +616,10 @@ code {
 }
 .contact-body .contact-grid .email-form button {
   box-shadow: inset 0px 1px 0px 0px #efdcfb;
-  background: linear-gradient(to bottom, #4BC0C8 5%, #bc80ea 100%);
-  background-color: #dfbdfa;
+  background: linear-gradient(to bottom, #1E8449 5%, #28b362 100%);
+  background-color: #1E8449;
   border-radius: 6px;
-  border: 1px solid #c584f3;
+  border: 1px solid #1E8449;
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
@@ -626,15 +627,15 @@ code {
   font-weight: bold;
   padding: 10px 24px;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #9752cc;
+  text-shadow: 0px 1px 0px #1E8449;
   display: flex;
   justify-content: center;
   margin: auto;
   width: 150px;
 }
 .contact-body .contact-grid .email-form button:hover {
-  background: linear-gradient(to bottom, #bc80ea 5%, #FEAC5E 100%);
-  background-color: #bc80ea;
+  background: linear-gradient(to bottom, #28b362 5%, #1E8449 100%);
+  background-color: #1E8449;
 }
 .contact-body .contact-grid .email-form button:active {
   position: relative;
@@ -714,26 +715,26 @@ code {
 }
 .register-box-background .register-box .project-button {
   box-shadow: inset 0px 1px 0px 0px #efdcfb;
-  background: linear-gradient(to bottom, #4BC0C8 5%, #bc80ea 100%);
-  background-color: #dfbdfa;
+  background: linear-gradient(to bottom, #1E8449 5%, #28b362 100%);
+  background-color: #1E8449;
   border-radius: 6px;
-  border: 1px solid #c584f3;
+  border: 1px solid #1E8449;
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
   font-size: 15px;
   font-weight: bold;
-  padding: 10px 24px;
+  padding: 10px 0;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #9752cc;
+  text-shadow: 0px 1px 0px #1E8449;
   display: flex;
   justify-content: center;
-  margin: 20px auto;
+  margin: 20px 82px;
   width: 250px;
 }
 .register-box-background .register-box .project-button:hover {
-  background: linear-gradient(to bottom, #bc80ea 5%, #FEAC5E 100%);
-  background-color: #bc80ea;
+  background: linear-gradient(to bottom, #28b362 5%, #1E8449 100%);
+  background-color: #1E8449;
 }
 .register-box-background .register-box .project-button:active {
   position: relative;
@@ -813,26 +814,26 @@ code {
 }
 .login-box-background .login-box .project-button {
   box-shadow: inset 0px 1px 0px 0px #efdcfb;
-  background: linear-gradient(to bottom, #4BC0C8 5%, #bc80ea 100%);
-  background-color: #dfbdfa;
+  background: linear-gradient(to bottom, #1E8449 5%, #28b362 100%);
+  background-color: #1E8449;
   border-radius: 6px;
-  border: 1px solid #c584f3;
+  border: 1px solid #1E8449;
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
   font-size: 15px;
   font-weight: bold;
-  padding: 10px 24px;
+  padding: 10px 0;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #9752cc;
+  text-shadow: 0px 1px 0px #1E8449;
   display: flex;
   justify-content: center;
-  margin: 20px auto;
+  margin: 20px 82px;
   width: 250px;
 }
 .login-box-background .login-box .project-button:hover {
-  background: linear-gradient(to bottom, #bc80ea 5%, #FEAC5E 100%);
-  background-color: #bc80ea;
+  background: linear-gradient(to bottom, #28b362 5%, #1E8449 100%);
+  background-color: #1E8449;
 }
 .login-box-background .login-box .project-button:active {
   position: relative;
