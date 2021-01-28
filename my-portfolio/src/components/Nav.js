@@ -13,7 +13,7 @@ function Nav(props) {
   return (
     <div className="navigation">
       <Layout>
-          <Header className="header-color" title={<Link to='/'>Tiffany Simionescu</Link>} scroll>
+          <Header className="header-color" title={<Link to='/react-portfolio'>Tiffany Simionescu</Link>} scroll>
               <Navigation>
                   <Link className="nav-link" to="/resume">Resume</Link>
                   <Link className="nav-link" to="/projects">Projects</Link>
@@ -22,7 +22,7 @@ function Nav(props) {
                   {!localStorage.getItem('token') ? (
                     <Link className="nav-link" to="/login" className="link">Login</Link>
                    ) : (
-                    <Link className="nav-link" to="/" className="link"
+                    <Link className="nav-link" to="/react-portfolio" className="link"
                     onClick={() => props.logout()}>Log Out</Link>
                    )}
                   {/* {props.loggedIn ? null : (
@@ -36,7 +36,7 @@ function Nav(props) {
               </Navigation>
           </Header>
           <Drawer className="drawer-link" title={<Link style={{ textDecoration: 'none', color: 'black' }}
-        to='/'>Tiffany Simionescu</Link>}>
+        to='/react-portfolio'>Tiffany Simionescu</Link>}>
               <Navigation>
                   <Link to="/resume">Resume</Link>
                   <Link to="/aboutme">About Me</Link>

@@ -15,7 +15,7 @@ import PythonProjectForm from './forms/PythonProjectForm';
 
 const Main = () => (
   <Switch>
-    <Route exact path="/" component={LandingPage} />
+    <Route exact path="/react-portfolio" component={LandingPage} />
     <Route path="/contact" component={ContactForm} />
     <Route path="/projects" component={Projects} />
     <Route path="/resume" component={Resume} />
